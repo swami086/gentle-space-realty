@@ -1,0 +1,317 @@
+{
+  "userSessionsMemory": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-13T09:26:31.437Z",
+    "description": "User session data and interaction patterns for cross-agent sharing",
+    
+    "activeSessions": {
+      "session_abc123": {
+        "session_id": "session_abc123",
+        "user_type": "visitor",
+        "ip_address": "192.168.1.100",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "session_start": "2025-09-13T08:45:12Z",
+        "last_activity": "2025-09-13T09:15:33Z",
+        "location": {
+          "country": "US",
+          "state": "IL",
+          "city": "Springfield",
+          "timezone": "America/Chicago"
+        },
+        "preferences": {
+          "price_range": {
+            "min": 400000,
+            "max": 600000
+          },
+          "property_type": "apartment",
+          "bedrooms": 2,
+          "location_preferences": ["Downtown District", "Riverside Heights"]
+        },
+        "interaction_history": [
+          {
+            "timestamp": "2025-09-13T08:45:12Z",
+            "action": "page_visit",
+            "page": "/",
+            "duration": 45
+          },
+          {
+            "timestamp": "2025-09-13T08:46:00Z",
+            "action": "search",
+            "query": "2 bedroom apartment downtown",
+            "results_count": 1,
+            "duration": 120
+          },
+          {
+            "timestamp": "2025-09-13T08:48:15Z",
+            "action": "property_view",
+            "property_id": "prop_001",
+            "duration": 180,
+            "interactions": ["image_gallery", "map_view", "features_expand"]
+          },
+          {
+            "timestamp": "2025-09-13T09:15:33Z",
+            "action": "inquiry_form_started",
+            "property_id": "prop_001",
+            "form_completion": 0.6
+          }
+        ],
+        "behavioral_signals": {
+          "engagement_score": 0.75,
+          "purchase_intent": "medium",
+          "time_on_site": 1821,
+          "pages_viewed": 4,
+          "bounce_rate": 0.0,
+          "conversion_probability": 0.23
+        }
+      },
+      
+      "session_def456": {
+        "session_id": "session_def456",
+        "user_type": "returning_visitor",
+        "ip_address": "192.168.1.105",
+        "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X)",
+        "session_start": "2025-09-13T09:10:20Z",
+        "last_activity": "2025-09-13T09:25:45Z",
+        "previous_sessions": ["session_def456_prev1", "session_def456_prev2"],
+        "location": {
+          "country": "US",
+          "state": "IL",
+          "city": "Springfield",
+          "timezone": "America/Chicago"
+        },
+        "preferences": {
+          "price_range": {
+            "min": 550000,
+            "max": 750000
+          },
+          "property_type": "house",
+          "bedrooms": 3,
+          "must_have_features": ["garden", "garage", "good_schools"]
+        },
+        "interaction_history": [
+          {
+            "timestamp": "2025-09-13T09:10:20Z",
+            "action": "direct_visit",
+            "page": "/properties",
+            "referrer": "bookmark"
+          },
+          {
+            "timestamp": "2025-09-13T09:12:15Z",
+            "action": "filter_application",
+            "filters": {
+              "type": "house",
+              "min_price": 550000,
+              "bedrooms": 3
+            },
+            "results_count": 1
+          },
+          {
+            "timestamp": "2025-09-13T09:14:30Z",
+            "action": "property_view",
+            "property_id": "prop_002",
+            "duration": 240,
+            "interactions": ["image_gallery", "virtual_tour", "neighborhood_info"]
+          },
+          {
+            "timestamp": "2025-09-13T09:20:10Z",
+            "action": "favorite_added",
+            "property_id": "prop_002"
+          },
+          {
+            "timestamp": "2025-09-13T09:25:45Z",
+            "action": "inquiry_submitted",
+            "property_id": "prop_002",
+            "inquiry_type": "schedule_showing",
+            "contact_method": "phone"
+          }
+        ],
+        "behavioral_signals": {
+          "engagement_score": 0.92,
+          "purchase_intent": "high",
+          "time_on_site": 925,
+          "pages_viewed": 6,
+          "bounce_rate": 0.0,
+          "conversion_probability": 0.78
+        }
+      },
+      
+      "session_admin_ghi789": {
+        "session_id": "session_admin_ghi789",
+        "user_type": "admin",
+        "admin_id": "admin_sarah_chen",
+        "ip_address": "192.168.1.200",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "session_start": "2025-09-13T07:30:00Z",
+        "last_activity": "2025-09-13T09:26:31.437Z",
+        "authentication": {
+          "login_method": "username_password",
+          "mfa_enabled": true,
+          "role": "agent",
+          "permissions": ["property_management", "inquiry_management", "analytics_view"]
+        },
+        "admin_activities": [
+          {
+            "timestamp": "2025-09-13T07:30:00Z",
+            "action": "login",
+            "result": "success"
+          },
+          {
+            "timestamp": "2025-09-13T07:35:15Z",
+            "action": "dashboard_view",
+            "widgets_loaded": ["recent_inquiries", "property_performance", "daily_stats"]
+          },
+          {
+            "timestamp": "2025-09-13T08:00:20Z",
+            "action": "inquiry_response",
+            "inquiry_id": "inq_001",
+            "response_type": "email",
+            "status_update": "contacted"
+          },
+          {
+            "timestamp": "2025-09-13T08:30:45Z",
+            "action": "property_update",
+            "property_id": "prop_002",
+            "changes": ["description_updated", "images_added"]
+          },
+          {
+            "timestamp": "2025-09-13T09:15:10Z",
+            "action": "analytics_report",
+            "report_type": "weekly_performance",
+            "export_format": "pdf"
+          }
+        ],
+        "performance_metrics": {
+          "inquiries_handled": 5,
+          "response_time_avg": "45_minutes",
+          "properties_updated": 2,
+          "conversion_rate": 0.34
+        }
+      }
+    },
+    
+    "sessionAnalytics": {
+      "aggregateMetrics": {
+        "total_active_sessions": 3,
+        "visitor_sessions": 2,
+        "admin_sessions": 1,
+        "average_session_duration": "22_minutes",
+        "bounce_rate": 0.15,
+        "conversion_rate": 0.31
+      },
+      
+      "trafficPatterns": {
+        "peak_hours": ["09:00-11:00", "14:00-16:00", "19:00-21:00"],
+        "traffic_sources": {
+          "direct": 0.45,
+          "search": 0.35,
+          "social": 0.12,
+          "referral": 0.08
+        },
+        "device_distribution": {
+          "desktop": 0.55,
+          "mobile": 0.40,
+          "tablet": 0.05
+        },
+        "browser_distribution": {
+          "chrome": 0.65,
+          "safari": 0.20,
+          "firefox": 0.10,
+          "edge": 0.05
+        }
+      },
+      
+      "userJourneyAnalysis": {
+        "common_paths": [
+          {
+            "path": ["homepage", "search", "property_details", "inquiry"],
+            "frequency": 0.35,
+            "conversion_rate": 0.28
+          },
+          {
+            "path": ["homepage", "browse_all", "filter", "property_details"],
+            "frequency": 0.25,
+            "conversion_rate": 0.15
+          },
+          {
+            "path": ["direct_property_link", "property_details", "inquiry"],
+            "frequency": 0.20,
+            "conversion_rate": 0.55
+          }
+        ],
+        "drop_off_points": {
+          "search_results": 0.25,
+          "property_details": 0.15,
+          "inquiry_form": 0.35
+        }
+      }
+    },
+    
+    "personalizationData": {
+      "userSegments": {
+        "first_time_buyers": {
+          "characteristics": ["price_sensitive", "information_seeking", "longer_decision_time"],
+          "session_count": 1,
+          "conversion_rate": 0.12
+        },
+        "investors": {
+          "characteristics": ["roi_focused", "quick_decisions", "multiple_properties"],
+          "session_count": 0,
+          "conversion_rate": 0.45
+        },
+        "families": {
+          "characteristics": ["school_focused", "space_requirements", "neighborhood_important"],
+          "session_count": 1,
+          "conversion_rate": 0.35
+        }
+      },
+      
+      "recommendationEngine": {
+        "content_based": {
+          "property_similarity": "feature_vector_cosine_similarity",
+          "user_preferences": "weighted_feature_matching"
+        },
+        "collaborative_filtering": {
+          "user_similarity": "jaccard_similarity_on_viewed_properties",
+          "item_similarity": "users_who_viewed_also_viewed"
+        }
+      }
+    },
+    
+    "privacyCompliance": {
+      "dataRetention": {
+        "anonymous_sessions": "30_days",
+        "identified_sessions": "2_years_with_consent",
+        "admin_sessions": "5_years_audit_requirement"
+      },
+      "consentManagement": {
+        "tracking_consent": "explicit_opt_in",
+        "marketing_consent": "separate_opt_in",
+        "analytics_consent": "implied_with_opt_out"
+      },
+      "dataProcessing": {
+        "anonymization": "ip_masking_and_session_id_hashing",
+        "encryption": "aes_256_for_pii",
+        "access_controls": "role_based_with_audit_logging"
+      }
+    },
+    
+    "realTimeSync": {
+      "activeConnections": {
+        "websocket_connections": 2,
+        "sse_connections": 1,
+        "poll_connections": 0
+      },
+      "eventStreaming": {
+        "property_updates": "immediate_push",
+        "price_changes": "immediate_push",
+        "new_listings": "immediate_push",
+        "inquiry_responses": "immediate_push"
+      },
+      "loadBalancing": {
+        "connection_distribution": "round_robin",
+        "failover_strategy": "graceful_degradation",
+        "health_monitoring": "heartbeat_every_30s"
+      }
+    }
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "monitoring": {
+    "name": "Gentle Space Realty Production Monitoring",
+    "version": "1.0.0",
+    "platform": "vercel",
+    "environment": "production"
+  },
+  
+  "performance": {
+    "thresholds": {
+      "frontend_load_time": {
+        "warning": 3000,
+        "critical": 5000,
+        "unit": "ms",
+        "description": "Time to fully load frontend application"
+      },
+      "api_response_time": {
+        "warning": 500,
+        "critical": 2000,
+        "unit": "ms",
+        "description": "API endpoint response time"
+      },
+      "cold_start_time": {
+        "warning": 1000,
+        "critical": 3000,
+        "unit": "ms",
+        "description": "Serverless function cold start time"
+      },
+      "bundle_size": {
+        "warning": 500,
+        "critical": 1000,
+        "unit": "KB",
+        "description": "JavaScript bundle size (gzipped)"
+      }
+    },
+    
+    "metrics_to_track": [
+      "Core Web Vitals (LCP, FID, CLS)",
+      "Time to First Byte (TTFB)",
+      "First Contentful Paint (FCP)",
+      "API endpoint response times",
+      "Database query performance",
+      "Function execution duration",
+      "Memory usage",
+      "Error rates"
+    ]
+  },
+  
+  "availability": {
+    "thresholds": {
+      "uptime": {
+        "target": 99.9,
+        "unit": "%",
+        "measurement_period": "30d"
+      },
+      "error_rate": {
+        "warning": 1.0,
+        "critical": 5.0,
+        "unit": "%",
+        "measurement_period": "1h"
+      },
+      "success_rate": {
+        "minimum": 95.0,
+        "unit": "%",
+        "measurement_period": "1h"
+      }
+    }
+  },
+  
+  "alerts": {
+    "channels": [
+      {
+        "type": "email",
+        "recipients": ["admin@gentlespace.com"],
+        "severity": ["critical", "warning"]
+      },
+      {
+        "type": "slack",
+        "webhook_url": "SET_IN_VERCEL_DASHBOARD",
+        "severity": ["critical"]
+      }
+    ],
+    
+    "rules": [
+      {
+        "name": "High Error Rate",
+        "condition": "error_rate > 5%",
+        "severity": "critical",
+        "description": "Error rate exceeds 5% over 5-minute period",
+        "action": "immediate_notification"
+      },
+      {
+        "name": "Database Connection Issues",
+        "condition": "database_connection_errors > 3",
+        "severity": "critical",
+        "description": "Multiple database connection failures",
+        "action": "immediate_notification"
+      },
+      {
+        "name": "Slow API Response",
+        "condition": "api_response_time_95th > 2000ms",
+        "severity": "warning",
+        "description": "95th percentile API response time exceeds 2 seconds",
+        "action": "investigate"
+      },
+      {
+        "name": "High Memory Usage",
+        "condition": "memory_usage > 80%",
+        "severity": "warning",
+        "description": "Function memory usage exceeds 80%",
+        "action": "optimize"
+      },
+      {
+        "name": "Cold Start Performance",
+        "condition": "cold_start_time_avg > 1500ms",
+        "severity": "warning",
+        "description": "Average cold start time exceeds 1.5 seconds",
+        "action": "optimize"
+      }
+    ]
+  },
+  
+  "health_checks": {
+    "endpoints": [
+      {
+        "url": "/api/health",
+        "method": "GET",
+        "expected_status": 200,
+        "timeout": 10000,
+        "interval": 60000,
+        "retry_attempts": 3,
+        "description": "API health check"
+      },
+      {
+        "url": "/",
+        "method": "GET",
+        "expected_status": 200,
+        "timeout": 5000,
+        "interval": 300000,
+        "retry_attempts": 2,
+        "description": "Frontend application availability"
+      }
+    ]
+  },
+  
+  "logging": {
+    "levels": {
+      "production": "warn",
+      "development": "debug"
+    },
+    "structured_logging": true,
+    "log_retention": "30d",
+    "sensitive_data_filtering": true,
+    "categories": [
+      "authentication",
+      "database",
+      "api_requests",
+      "errors",
+      "performance",
+      "security"
+    ]
+  },
+  
+  "security_monitoring": {
+    "rate_limiting": {
+      "track_violations": true,
+      "alert_on_threshold": true,
+      "threshold": 10
+    },
+    "failed_authentication": {
+      "track_attempts": true,
+      "alert_threshold": 5,
+      "time_window": "5m"
+    },
+    "suspicious_activity": {
+      "unusual_traffic_patterns": true,
+      "multiple_ip_requests": true,
+      "payload_anomalies": true
+    }
+  },
+  
+  "business_metrics": {
+    "kpis": [
+      {
+        "name": "Property Views",
+        "description": "Number of property detail page views",
+        "target": "increase"
+      },
+      {
+        "name": "Inquiry Submissions",
+        "description": "Number of contact form submissions",
+        "target": "increase"
+      },
+      {
+        "name": "User Engagement",
+        "description": "Average session duration and pages per session",
+        "target": "increase"
+      },
+      {
+        "name": "Conversion Rate",
+        "description": "Percentage of visitors who submit inquiries",
+        "target": "increase"
+      }
+    ]
+  },
+  
+  "dashboard_configuration": {
+    "vercel_analytics": {
+      "enabled": true,
+      "features": [
+        "Real User Monitoring",
+        "Core Web Vitals",
+        "Top Pages",
+        "Top Referrers",
+        "Device Analytics"
+      ]
+    },
+    
+    "custom_metrics": [
+      {
+        "name": "API Performance",
+        "chart_type": "line",
+        "metrics": ["response_time", "throughput", "error_rate"],
+        "time_range": "24h"
+      },
+      {
+        "name": "Database Performance",
+        "chart_type": "line", 
+        "metrics": ["query_time", "connection_pool", "active_connections"],
+        "time_range": "1h"
+      },
+      {
+        "name": "Business Metrics",
+        "chart_type": "bar",
+        "metrics": ["property_views", "inquiries", "conversions"],
+        "time_range": "7d"
+      }
+    ]
+  },
+  
+  "incident_response": {
+    "escalation": [
+      {
+        "level": 1,
+        "severity": "warning",
+        "response_time": "30m",
+        "assignee": "on_call_dev"
+      },
+      {
+        "level": 2,
+        "severity": "critical",
+        "response_time": "15m",
+        "assignee": "lead_dev"
+      },
+      {
+        "level": 3,
+        "severity": "critical_system_down",
+        "response_time": "5m",
+        "assignee": "all_hands"
+      }
+    ],
+    
+    "playbooks": [
+      {
+        "scenario": "Database Connection Failure",
+        "steps": [
+          "Check database provider status",
+          "Verify connection string and credentials",
+          "Review connection pool settings",
+          "Restart application if necessary",
+          "Communicate status to stakeholders"
+        ]
+      },
+      {
+        "scenario": "High Error Rate",
+        "steps": [
+          "Identify error patterns in logs",
+          "Check recent deployments",
+          "Review performance metrics",
+          "Implement hotfix if needed",
+          "Monitor error rate recovery"
+        ]
+      },
+      {
+        "scenario": "Performance Degradation",
+        "steps": [
+          "Check Core Web Vitals",
+          "Review API response times",
+          "Analyze database query performance",
+          "Check third-party service status",
+          "Optimize bottlenecks identified"
+        ]
+      }
+    ]
+  }
+}

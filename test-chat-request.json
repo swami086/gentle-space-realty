@@ -1,0 +1,15 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AI assistant for Gentle Space Realty helping users find office spaces in Bangalore."
+    },
+    {
+      "role": "user", 
+      "content": "Hello! I need help finding a small office space in Koramangala."
+    }
+  ],
+  "stream": false,
+  "temperature": 0.7,
+  "max_tokens": 1000
+}

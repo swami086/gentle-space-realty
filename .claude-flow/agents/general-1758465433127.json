@@ -1,0 +1,14 @@
+{
+  "id": "general-1758465433127",
+  "name": "agent-1758465433127",
+  "type": "general",
+  "status": "active",
+  "activeTasks": 0,
+  "lastActivity": 1758465433127,
+  "capabilities": [
+    "Research",
+    "Analysis",
+    "Code Generation"
+  ],
+  "createdAt": 1758465433127
+}

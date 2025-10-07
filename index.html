@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gentle Space - Find Your Perfect Office Space in Bengaluru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Content Security Policy (frame-ancestors removed - only works in HTTP headers) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://maps.googleapis.com https://maps.gstatic.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.googleapis.com https://api.thesyslabs.com https://*.thesys.dev %VITE_DEV_CONNECT_SRC%; script-src 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com %VITE_DEV_SCRIPT_SRC%; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com; img-src 'self' data: blob: https: https://*.supabase.co https://maps.googleapis.com https://maps.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; media-src 'self' blob: https://*.supabase.co; frame-src 'self' https://maps.google.com; worker-src 'self' blob:; child-src 'self' blob:; form-action 'self'; %VITE_CSP_DIRECTIVES%">
+    
+    <!-- CSP Report-Only for Development -->
+    <!-- <meta http-equiv="Content-Security-Policy-Report-Only" content="default-src 'self'; report-uri /api/csp-report"> -->
+    
+    <!-- DNS Prefetch for External Resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maps.googleapis.com">
+    <link rel="dns-prefetch" href="//maps.gstatic.com">
+    <link rel="dns-prefetch" href="//identitytoolkit.googleapis.com">
+    <link rel="dns-prefetch" href="//securetoken.googleapis.com">
+    
+    <!-- Preconnect to Critical External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://identitytoolkit.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://securetoken.googleapis.com" crossorigin>
+    
+    <!-- Supabase Preconnect (will be replaced by Vite) -->
+    %VITE_SUPABASE_PRECONNECT%
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#3B82F6">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Find your perfect office space in Bengaluru with Gentle Space Realty. Premium commercial properties, flexible leasing options, and prime locations.">
+    <meta name="keywords" content="office space, commercial property, Bengaluru, Bangalore, coworking, workspace, real estate">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gentle Space - Find Your Perfect Office Space in Bengaluru">
+    <meta property="og:description" content="Find your perfect office space in Bengaluru with Gentle Space Realty. Premium commercial properties, flexible leasing options, and prime locations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="%VITE_APP_URL%">
+    <meta property="og:image" content="%VITE_APP_URL%/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gentle Space - Find Your Perfect Office Space in Bengaluru">
+    <meta name="twitter:description" content="Find your perfect office space in Bengaluru with Gentle Space Realty. Premium commercial properties, flexible leasing options, and prime locations.">
+    <meta name="twitter:image" content="%VITE_APP_URL%/images/og-image.jpg">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/index.tsx"></script>
+    
+    <!-- CSP Violation Reporting (Development) -->
+    <script>
+      if (window.location.hostname === 'localhost' && typeof console !== 'undefined') {
+        document.addEventListener('securitypolicyviolation', function(event) {
+          console.group('🛡️ CSP Violation Detected');
+          console.error('Violated Directive:', event.violatedDirective);
+          console.error('Blocked URI:', event.blockedURI);
+          console.error('Document URI:', event.documentURI);
+          console.error('Line Number:', event.lineNumber);
+          console.error('Column Number:', event.columnNumber);
+          console.error('Source File:', event.sourceFile);
+          console.error('Sample:', event.sample);
+          console.groupEnd();
+          
+          // Send to development server for logging
+          if (event.blockedURI && event.violatedDirective) {
+            fetch('/api/csp-violation', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                violatedDirective: event.violatedDirective,
+                blockedURI: event.blockedURI,
+                documentURI: event.documentURI,
+                lineNumber: event.lineNumber,
+                columnNumber: event.columnNumber,
+                sourceFile: event.sourceFile,
+                sample: event.sample,
+                timestamp: new Date().toISOString()
+              })
+            }).catch(() => {
+              // Ignore fetch errors for CSP reporting
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

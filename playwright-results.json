@@ -1,0 +1,970 @@
+{
+  "config": {
+    "configFile": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/playwright.config.ts",
+    "rootDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 7
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "Microsoft Edge",
+        "name": "Microsoft Edge",
+        "testDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 7
+        },
+        "id": "Google Chrome",
+        "name": "Google Chrome",
+        "testDir": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 7,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:5174",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "admin-properties-debug.spec.ts",
+      "file": "admin-properties-debug.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin Properties Management Debug",
+          "file": "admin-properties-debug.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Debug admin properties page display issue",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5798,
+                      "error": {
+                        "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 7696
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 7696
+                          },
+                          "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔍 Starting admin properties debug test...\n"
+                        },
+                        {
+                          "text": "📊 Properties on main page: 18\n"
+                        },
+                        {
+                          "text": "📡 Main API returned 18 properties\n"
+                        },
+                        {
+                          "text": "🔍 Trying admin route: /admin\n"
+                        },
+                        {
+                          "text": "✅ Found admin page at: /admin\n"
+                        },
+                        {
+                          "text": "📍 Successfully loaded admin page: /admin\n"
+                        },
+                        {
+                          "text": "📊 Properties visible on admin page: 0 (using selector: )\n"
+                        },
+                        {
+                          "text": "\n🌐 Network Requests Analysis:\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: 301\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: 401\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-28T13:11:01.574Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 7696
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73acdf9d6a4e9cbe87c0-c2d3f0a4884ced93b508",
+              "file": "admin-properties-debug.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "Debug admin properties page display issue",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 5286,
+                      "error": {
+                        "message": "Error: locator.count: invalid regular expression flag ,\ncreateTextMatcher@debugger eval code:7696:16\nqueryAll@debugger eval code:6613:50\n_queryEngineAll@debugger eval code:6586:49\nquerySelectorAll@debugger eval code:6573:30\n@debugger eval code line 291 > eval:2:23\nevaluate@debugger eval code:293:16\n@debugger eval code:1:44\n",
+                        "stack": "Error: locator.count: invalid regular expression flag ,\ncreateTextMatcher@debugger eval code:7696:16\nqueryAll@debugger eval code:6613:50\n_queryEngineAll@debugger eval code:6586:49\nquerySelectorAll@debugger eval code:6573:30\n@debugger eval code line 291 > eval:2:23\nevaluate@debugger eval code:293:16\n@debugger eval code:1:44\n\n    at createTextMatcher@debugger eval code:7696:16\n    at queryAll@debugger eval code:6613:50\n    at _queryEngineAll@debugger eval code:6586:49\n    at querySelectorAll@debugger eval code:6573:30\n    at @debugger eval code line 291 > eval:2:23\n    at evaluate@debugger eval code:293:16\n    at @debugger eval code:1:44\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167",
+                        "location": {
+                          "file": "createTextMatcher@debugger eval code",
+                          "column": 16,
+                          "line": 7696
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "createTextMatcher@debugger eval code",
+                            "column": 16,
+                            "line": 7696
+                          },
+                          "message": "Error: locator.count: invalid regular expression flag ,\ncreateTextMatcher@debugger eval code:7696:16\nqueryAll@debugger eval code:6613:50\n_queryEngineAll@debugger eval code:6586:49\nquerySelectorAll@debugger eval code:6573:30\n@debugger eval code line 291 > eval:2:23\nevaluate@debugger eval code:293:16\n@debugger eval code:1:44\n\n    at createTextMatcher@debugger eval code:7696:16\n    at queryAll@debugger eval code:6613:50\n    at _queryEngineAll@debugger eval code:6586:49\n    at querySelectorAll@debugger eval code:6573:30\n    at @debugger eval code line 291 > eval:2:23\n    at evaluate@debugger eval code:293:16\n    at @debugger eval code:1:44\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔍 Starting admin properties debug test...\n"
+                        },
+                        {
+                          "text": "📊 Properties on main page: 18\n"
+                        },
+                        {
+                          "text": "📡 Main API returned 18 properties\n"
+                        },
+                        {
+                          "text": "🔍 Trying admin route: /admin\n"
+                        },
+                        {
+                          "text": "✅ Found admin page at: /admin\n"
+                        },
+                        {
+                          "text": "📍 Successfully loaded admin page: /admin\n"
+                        },
+                        {
+                          "text": "📊 Properties visible on admin page: 0 (using selector: )\n"
+                        },
+                        {
+                          "text": "\n🌐 Network Requests Analysis:\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: 301\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: 401\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-28T13:11:01.547Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-firefox/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-firefox/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "createTextMatcher@debugger eval code",
+                        "column": 16,
+                        "line": 7696
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73acdf9d6a4e9cbe87c0-4f6ad48e11ad2f1d4429",
+              "file": "admin-properties-debug.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "Debug admin properties page display issue",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 6405,
+                      "error": {
+                        "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor.",
+                        "stack": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor.\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167",
+                        "location": {
+                          "file": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts",
+                          "column": 167,
+                          "line": 174
+                        },
+                        "snippet": "  172 |\n  173 |     // 3. Look for pagination controls\n> 174 |     const paginationElements = await page.locator('text=/page|next|previous|more|load/i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more').count();\n      |                                                                                                                                                                       ^\n  175 |     console.log(`📄 Pagination elements found: ${paginationElements}`);\n  176 |\n  177 |     if (paginationElements > 0) {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts",
+                            "column": 167,
+                            "line": 174
+                          },
+                          "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor.\n\n  172 |\n  173 |     // 3. Look for pagination controls\n> 174 |     const paginationElements = await page.locator('text=/page|next|previous|more|load/i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more').count();\n      |                                                                                                                                                                       ^\n  175 |     console.log(`📄 Pagination elements found: ${paginationElements}`);\n  176 |\n  177 |     if (paginationElements > 0) {\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔍 Starting admin properties debug test...\n"
+                        },
+                        {
+                          "text": "📊 Properties on main page: 18\n"
+                        },
+                        {
+                          "text": "📡 Main API returned 18 properties\n"
+                        },
+                        {
+                          "text": "🔍 Trying admin route: /admin\n"
+                        },
+                        {
+                          "text": "✅ Found admin page at: /admin\n"
+                        },
+                        {
+                          "text": "📍 Successfully loaded admin page: /admin\n"
+                        },
+                        {
+                          "text": "📊 Properties visible on admin page: 0 (using selector: )\n"
+                        },
+                        {
+                          "text": "\n🌐 Network Requests Analysis:\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: 301\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: 401\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-28T13:11:01.564Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-webkit/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-webkit/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts",
+                        "column": 167,
+                        "line": 174
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73acdf9d6a4e9cbe87c0-94d539a432627d978071",
+              "file": "admin-properties-debug.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "Debug admin properties page display issue",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 5846,
+                      "error": {
+                        "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 7696
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 7696
+                          },
+                          "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔍 Starting admin properties debug test...\n"
+                        },
+                        {
+                          "text": "📊 Properties on main page: 18\n"
+                        },
+                        {
+                          "text": "📡 Main API returned 18 properties\n"
+                        },
+                        {
+                          "text": "🔍 Trying admin route: /admin\n"
+                        },
+                        {
+                          "text": "✅ Found admin page at: /admin\n"
+                        },
+                        {
+                          "text": "📍 Successfully loaded admin page: /admin\n"
+                        },
+                        {
+                          "text": "📊 Properties visible on admin page: 0 (using selector: )\n"
+                        },
+                        {
+                          "text": "\n🌐 Network Requests Analysis:\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: 301\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: 401\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-28T13:11:01.557Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Mobile-Chrome/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Mobile-Chrome/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Mobile-Chrome/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 7696
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73acdf9d6a4e9cbe87c0-fc75602b573585afa276",
+              "file": "admin-properties-debug.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "Debug admin properties page display issue",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 6375,
+                      "error": {
+                        "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor.",
+                        "stack": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor.\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167",
+                        "location": {
+                          "file": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts",
+                          "column": 167,
+                          "line": 174
+                        },
+                        "snippet": "  172 |\n  173 |     // 3. Look for pagination controls\n> 174 |     const paginationElements = await page.locator('text=/page|next|previous|more|load/i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more').count();\n      |                                                                                                                                                                       ^\n  175 |     console.log(`📄 Pagination elements found: ${paginationElements}`);\n  176 |\n  177 |     if (paginationElements > 0) {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts",
+                            "column": 167,
+                            "line": 174
+                          },
+                          "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor.\n\n  172 |\n  173 |     // 3. Look for pagination controls\n> 174 |     const paginationElements = await page.locator('text=/page|next|previous|more|load/i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more').count();\n      |                                                                                                                                                                       ^\n  175 |     console.log(`📄 Pagination elements found: ${paginationElements}`);\n  176 |\n  177 |     if (paginationElements > 0) {\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔍 Starting admin properties debug test...\n"
+                        },
+                        {
+                          "text": "📊 Properties on main page: 18\n"
+                        },
+                        {
+                          "text": "📡 Main API returned 18 properties\n"
+                        },
+                        {
+                          "text": "🔍 Trying admin route: /admin\n"
+                        },
+                        {
+                          "text": "✅ Found admin page at: /admin\n"
+                        },
+                        {
+                          "text": "📍 Successfully loaded admin page: /admin\n"
+                        },
+                        {
+                          "text": "📊 Properties visible on admin page: 0 (using selector: )\n"
+                        },
+                        {
+                          "text": "\n🌐 Network Requests Analysis:\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: 301\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: 401\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-28T13:11:01.551Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Mobile-Safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Mobile-Safari/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Mobile-Safari/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts",
+                        "column": 167,
+                        "line": 174
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73acdf9d6a4e9cbe87c0-37fb62826ca855e45e7d",
+              "file": "admin-properties-debug.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "Debug admin properties page display issue",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Microsoft Edge",
+                  "projectName": "Microsoft Edge",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "failed",
+                      "duration": 1,
+                      "error": {
+                        "message": "Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge\nRun \"npx playwright install msedge\"",
+                        "stack": "Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge\nRun \"npx playwright install msedge\""
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge\nRun \"npx playwright install msedge\""
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-28T13:11:01.551Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73acdf9d6a4e9cbe87c0-b58ea1b12d878381d197",
+              "file": "admin-properties-debug.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "Debug admin properties page display issue",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "failed",
+                      "duration": 4813,
+                      "error": {
+                        "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 7696
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 7696
+                          },
+                          "message": "Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor 'i, [class*=\"pagination\"], [class*=\"pager\"], button[class*=\"load\"], .load-more'\n    at new RegExp (<anonymous>)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at createTextMatcher (<anonymous>:7696:16)\n    at Object.queryAll (<anonymous>:6613:33)\n    at InjectedScript._queryEngineAll (<anonymous>:6586:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6573:30)\n    at eval (eval at evaluate (:291:30), <anonymous>:2:23)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/tests/admin-properties-debug.spec.ts:174:167"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔍 Starting admin properties debug test...\n"
+                        },
+                        {
+                          "text": "📊 Properties on main page: 18\n"
+                        },
+                        {
+                          "text": "📡 Main API returned 18 properties\n"
+                        },
+                        {
+                          "text": "🔍 Trying admin route: /admin\n"
+                        },
+                        {
+                          "text": "✅ Found admin page at: /admin\n"
+                        },
+                        {
+                          "text": "📍 Successfully loaded admin page: /admin\n"
+                        },
+                        {
+                          "text": "📊 Properties visible on admin page: 0 (using selector: )\n"
+                        },
+                        {
+                          "text": "\n🌐 Network Requests Analysis:\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: 301\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: 401\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/auth/me - Status: pending\n"
+                        },
+                        {
+                          "text": "📡 GET http://localhost:3001/api/v1/auth/me - Status: pending\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-28T13:11:01.553Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Google-Chrome/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Google-Chrome/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/swaminathan/Downloads/gentle_space_realty_i1aw6b/test-results/admin-properties-debug-Adm-e3508-operties-page-display-issue-Google-Chrome/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 7696
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73acdf9d6a4e9cbe87c0-3b8d87e429a76cf996af",
+              "file": "admin-properties-debug.spec.ts",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-28T13:11:01.123Z",
+    "duration": 15176.974,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "backend": {
+    "status": "pending",
+    "tests": [
+      {
+        "name": "Backend Server Health",
+        "status": "passed",
+        "details": "Server responding at http://localhost:3001"
+      },
+      {
+        "name": "Properties API Endpoint",
+        "status": "passed",
+        "details": "Retrieved 18 properties"
+      },
+      {
+        "name": "Testimonials API Endpoint",
+        "status": "passed",
+        "details": "Retrieved 6 testimonials"
+      },
+      {
+        "name": "FAQs API Endpoint",
+        "status": "passed",
+        "details": "Retrieved 14 FAQs"
+      },
+      {
+        "name": "Single Property API",
+        "status": "passed",
+        "details": "Retrieved property: Test Property E2E Flow"
+      },
+      {
+        "name": "CORS Configuration",
+        "status": "failed",
+        "details": "CORS headers missing"
+      }
+    ]
+  },
+  "frontend": {
+    "status": "pending",
+    "tests": [
+      {
+        "name": "Frontend Server Health",
+        "status": "passed",
+        "details": "Frontend responding at http://localhost:5175"
+      },
+      {
+        "name": "React App Structure",
+        "status": "passed",
+        "details": "React root element found"
+      },
+      {
+        "name": "Vite Development Server",
+        "status": "passed",
+        "details": "Vite dev server active"
+      }
+    ]
+  },
+  "integration": {
+    "status": "pending",
+    "tests": [
+      {
+        "name": "Database → API Data Flow",
+        "status": "passed",
+        "details": "Successfully retrieved 18 properties from Cloud SQL via Express API"
+      },
+      {
+        "name": "API Data Structure",
+        "status": "failed",
+        "details": "Missing required property fields"
+      },
+      {
+        "name": "Testimonials API Integration",
+        "status": "passed",
+        "details": "Testimonials: 6 records"
+      },
+      {
+        "name": "FAQs API Integration",
+        "status": "passed",
+        "details": "FAQs: 14 records"
+      },
+      {
+        "name": "API Response Time",
+        "status": "passed",
+        "details": "Response time: 110ms (Good)"
+      },
+      {
+        "name": "API Error Handling",
+        "status": "failed",
+        "details": "404 handling: Incorrect"
+      },
+      {
+        "name": "Frontend → Backend CORS",
+        "status": "passed",
+        "details": "Frontend can make API requests to backend"
+      },
+      {
+        "name": "API Accessibility",
+        "status": "failed",
+        "details": "CORS header: missing"
+      },
+      {
+        "name": "Full Stack Data Flow",
+        "status": "passed",
+        "details": "Complete flow: Frontend → Express → Cloud SQL → Response (101ms, 18 items)"
+      },
+      {
+        "name": "End-to-End Data Quality",
+        "status": "passed",
+        "details": "All properties have valid data structure"
+      },
+      {
+        "name": "Full Stack Error Handling",
+        "status": "passed",
+        "details": "Error response: HTTP 400 (Proper client error)"
+      }
+    ]
+  },
+  "overall": {
+    "status": "failed",
+    "totalTests": 20,
+    "passedTests": 16,
+    "failedTests": 4,
+    "warningTests": 0,
+    "successRate": 80
+  }
+}

@@ -1,0 +1,4 @@
+{"timestamp":"2025-09-14T06:14:18.275Z","alert":{"id":"system_memory_emergency_1757830458270","type":"system_memory","level":"emergency","message":"System memory critically low: 95.0%"}}
+{"timestamp":"2025-09-14T06:14:18.276Z","alert":{"id":"heap_pressure_warning_1757830458270","type":"heap_pressure","level":"warning","message":"Heap memory usage high: 80.0%"}}
+{"timestamp":"2025-09-14T06:14:18.787Z","alert":{"id":"system_memory_emergency_1757830458786","type":"system_memory","level":"emergency","message":"System memory critically low: 98.2%"}}
+{"timestamp":"2025-09-14T06:14:18.788Z","alert":{"id":"memory_fragmentation_critical_1757830458786","type":"memory_fragmentation","level":"critical","message":"High memory fragmentation: 60.1%"}}

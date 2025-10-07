@@ -1,0 +1,38 @@
+{
+  "migrationDate": "2025-09-28T14:16:03.431Z",
+  "status": "completed",
+  "bucketMappings": {
+    "property-images": "gentle-space-property-images",
+    "property-videos": "gentle-space-property-videos",
+    "property-media": "gentle-space-property-media",
+    "user-avatars": "gentle-space-user-avatars",
+    "testimonial-media": "gentle-space-testimonial-media",
+    "documents": "gentle-space-documents"
+  },
+  "migrationLog": [
+    "✅ Created bucket: gentle-space-property-images",
+    "✅ Created bucket: gentle-space-property-videos",
+    "✅ Created bucket: gentle-space-property-media",
+    "✅ Created bucket: gentle-space-user-avatars",
+    "✅ Created bucket: gentle-space-testimonial-media",
+    "✅ Created bucket: gentle-space-documents",
+    "📭 No files in bucket: property-images",
+    "✅ Migrated: videos/03aea400-9916-4056-9ab7-f8c837af9b27-WhatsApp_Video_2025-09-20_at_17.13.53.mp4 from property-videos to gentle-space-property-videos",
+    "✅ Migrated: videos/1758545481113-6effdd54-WhatsApp_Video_2025-09-20_at_17.13.53__1_.mp4 from property-videos to gentle-space-property-videos",
+    "✅ Migrated: videos/4328fd2a-0010-401a-b2bb-63e1a7a4c9ca-WhatsApp_Video_2025-09-20_at_17.13.53.mp4 from property-videos to gentle-space-property-videos",
+    "✅ Migrated: videos/e3a015ac-dccb-4bb7-8f30-5776375ac1c1-WhatsApp_Video_2025-09-20_at_17.13.53.mp4 from property-videos to gentle-space-property-videos",
+    "✅ Migrated: videos/e6eba091-b81c-45e9-803d-b4fa5aa8b3a3-WhatsApp_Video_2025-09-20_at_17.13.53.mp4 from property-videos to gentle-space-property-videos",
+    "📭 No files in bucket: property-media",
+    "📭 No files in bucket: user-avatars",
+    "📭 No files in bucket: testimonial-media",
+    "📭 No files in bucket: documents"
+  ],
+  "gcpUrls": {
+    "property-images": "https://storage.googleapis.com/gentle-space-property-images/",
+    "property-videos": "https://storage.googleapis.com/gentle-space-property-videos/",
+    "property-media": "https://storage.googleapis.com/gentle-space-property-media/",
+    "user-avatars": "https://storage.googleapis.com/gentle-space-user-avatars/",
+    "testimonial-media": "https://storage.googleapis.com/gentle-space-testimonial-media/",
+    "documents": "https://storage.googleapis.com/gentle-space-documents/"
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "adminOperationsMemory": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-13T09:26:31.437Z",
+    "description": "Administrative operations, permissions, and system management data",
+    
+    "adminUsers": {
+      "admin_sarah_chen": {
+        "id": "admin_sarah_chen",
+        "username": "sarah.chen",
+        "email": "sarah.chen@gentlespacerealty.com",
+        "role": "senior_agent",
+        "permissions": {
+          "property_management": {
+            "create": true,
+            "read": true,
+            "update": true,
+            "delete": false
+          },
+          "inquiry_management": {
+            "view_all": true,
+            "respond": true,
+            "assign": true,
+            "archive": true
+          },
+          "user_management": {
+            "view_agents": true,
+            "create_agent": false,
+            "modify_permissions": false
+          },
+          "analytics": {
+            "view_reports": true,
+            "export_data": true,
+            "system_metrics": false
+          }
+        },
+        "profile": {
+          "first_name": "Sarah",
+          "last_name": "Chen",
+          "phone": "+1-555-0123",
+          "specializations": ["downtown_properties", "luxury_apartments"],
+          "license_number": "RE-12345-IL",
+          "hire_date": "2023-03-15",
+          "performance_rating": "excellent"
+        },
+        "session_info": {
+          "current_session": "session_admin_ghi789",
+          "last_login": "2025-09-13T07:30:00Z",
+          "login_count": 147,
+          "failed_attempts": 0,
+          "password_last_changed": "2025-08-15T14:20:00Z",
+          "mfa_enabled": true
+        },
+        "assigned_properties": ["prop_001"],
+        "performance_metrics": {
+          "inquiries_handled_this_month": 23,
+          "response_time_avg": "42_minutes",
+          "conversion_rate": 0.34,
+          "customer_satisfaction": 4.7
+        }
+      },
+      
+      "admin_mike_rodriguez": {
+        "id": "admin_mike_rodriguez", 
+        "username": "mike.rodriguez",
+        "email": "mike.rodriguez@gentlespacerealty.com",
+        "role": "agent",
+        "permissions": {
+          "property_management": {
+            "create": true,
+            "read": true,
+            "update": true,
+            "delete": false
+          },
+          "inquiry_management": {
+            "view_assigned": true,
+            "respond": true,
+            "assign": false,
+            "archive": false
+          },
+          "user_management": {
+            "view_agents": false,
+            "create_agent": false,
+            "modify_permissions": false
+          },
+          "analytics": {
+            "view_own_reports": true,
+            "export_data": false,
+            "system_metrics": false
+          }
+        },
+        "profile": {
+          "first_name": "Mike",
+          "last_name": "Rodriguez",
+          "phone": "+1-555-0124",
+          "specializations": ["family_homes", "suburban_properties"],
+          "license_number": "RE-12346-IL",
+          "hire_date": "2024-01-10",
+          "performance_rating": "good"
+        },
+        "session_info": {
+          "current_session": null,
+          "last_login": "2025-09-12T16:45:00Z",
+          "login_count": 89,
+          "failed_attempts": 0,
+          "password_last_changed": "2025-07-22T09:15:00Z",
+          "mfa_enabled": true
+        },
+        "assigned_properties": ["prop_002"],
+        "performance_metrics": {
+          "inquiries_handled_this_month": 18,
+          "response_time_avg": "67_minutes",
+          "conversion_rate": 0.28,
+          "customer_satisfaction": 4.3
+        }
+      },
+      
+      "admin_system": {
+        "id": "admin_system",
+        "username": "system_admin",
+        "email": "admin@gentlespacerealty.com",
+        "role": "super_admin",
+        "permissions": {
+          "property_management": {
+            "create": true,
+            "read": true,
+            "update": true,
+            "delete": true
+          },
+          "inquiry_management": {
+            "view_all": true,
+            "respond": true,
+            "assign": true,
+            "archive": true,
+            "bulk_operations": true
+          },
+          "user_management": {
+            "view_all": true,
+            "create_user": true,
+            "modify_permissions": true,
+            "deactivate_user": true
+          },
+          "analytics": {
+            "view_all_reports": true,
+            "export_all_data": true,
+            "system_metrics": true,
+            "configuration": true
+          }
+        },
+        "profile": {
+          "first_name": "System",
+          "last_name": "Administrator",
+          "phone": "+1-555-0100",
+          "specializations": ["system_administration"],
+          "license_number": "SYS-ADMIN-001",
+          "hire_date": "2023-01-01",
+          "performance_rating": "system"
+        },
+        "session_info": {
+          "current_session": null,
+          "last_login": "2025-09-12T23:00:00Z",
+          "login_count": 456,
+          "failed_attempts": 0,
+          "password_last_changed": "2025-09-01T00:00:00Z",
+          "mfa_enabled": true
+        },
+        "assigned_properties": [],
+        "performance_metrics": {
+          "system_uptime": 0.997,
+          "backup_success_rate": 1.0,
+          "security_incidents": 0,
+          "performance_score": "excellent"
+        }
+      }
+    },
+    
+    "inquiryManagement": {
+      "activeInquiries": {
+        "inq_001": {
+          "id": "inq_001",
+          "property_id": "prop_001",
+          "customer_info": {
+            "name": "Jennifer Thompson",
+            "email": "jennifer.thompson@email.com",
+            "phone": "+1-555-0201",
+            "preferred_contact": "email"
+          },
+          "message": "I'm interested in scheduling a viewing for this apartment. I'm available weekdays after 5 PM or weekends.",
+          "priority": "medium",
+          "status": "contacted",
+          "assigned_agent": "admin_sarah_chen",
+          "submitted_at": "2025-09-12T14:30:00Z",
+          "responded_at": "2025-09-13T08:00:20Z",
+          "response_time_minutes": 1070,
+          "agent_notes": "Customer interested in immediate move-in. Scheduled viewing for Saturday 2 PM.",
+          "follow_up_scheduled": "2025-09-14T14:00:00Z",
+          "interaction_history": [
+            {
+              "timestamp": "2025-09-13T08:00:20Z",
+              "action": "initial_response",
+              "agent": "admin_sarah_chen",
+              "method": "email",
+              "notes": "Sent apartment details and availability"
+            }
+          ]
+        },
+        
+        "inq_002": {
+          "id": "inq_002",
+          "property_id": "prop_002",
+          "customer_info": {
+            "name": "David and Lisa Martinez",
+            "email": "martinez.family@email.com",
+            "phone": "+1-555-0202",
+            "preferred_contact": "phone"
+          },
+          "message": "We're looking for a family home with good schools nearby. This property looks perfect. Can we get more information about the school district and neighborhood?",
+          "priority": "high",
+          "status": "new",
+          "assigned_agent": "admin_mike_rodriguez",
+          "submitted_at": "2025-09-13T09:25:45Z",
+          "responded_at": null,
+          "response_time_minutes": null,
+          "agent_notes": null,
+          "follow_up_scheduled": null,
+          "interaction_history": []
+        },
+        
+        "inq_003": {
+          "id": "inq_003",
+          "property_id": "prop_001",
+          "customer_info": {
+            "name": "Robert Kim",
+            "email": "robert.kim@email.com",
+            "phone": "+1-555-0203",
+            "preferred_contact": "email"
+          },
+          "message": "Is this property still available? I'm pre-approved for a mortgage and ready to make an offer.",
+          "priority": "urgent",
+          "status": "contacted",
+          "assigned_agent": "admin_sarah_chen",
+          "submitted_at": "2025-09-13T09:45:10Z",
+          "responded_at": "2025-09-13T09:50:15Z",
+          "response_time_minutes": 5,
+          "agent_notes": "High-priority buyer with pre-approval. Needs immediate response.",
+          "follow_up_scheduled": "2025-09-13T15:00:00Z",
+          "interaction_history": [
+            {
+              "timestamp": "2025-09-13T09:50:15Z",
+              "action": "urgent_response",
+              "agent": "admin_sarah_chen", 
+              "method": "phone",
+              "notes": "Called immediately, property still available, scheduling showing"
+            }
+          ]
+        }
+      },
+      
+      "inquiryMetrics": {
+        "total_inquiries": 3,
+        "response_statistics": {
+          "average_response_time": "358_minutes",
+          "within_1_hour": 1,
+          "within_4_hours": 1,
+          "over_24_hours": 1
+        },
+        "status_distribution": {
+          "new": 1,
+          "contacted": 2,
+          "qualified": 0,
+          "scheduled": 0,
+          "closed": 0
+        },
+        "priority_distribution": {
+          "urgent": 1,
+          "high": 1,
+          "medium": 1,
+          "low": 0
+        },
+        "conversion_tracking": {
+          "inquiry_to_showing": 0.33,
+          "showing_to_offer": 0.0,
+          "offer_to_close": 0.0
+        }
+      }
+    },
+    
+    "systemOperations": {
+      "maintenance": {
+        "scheduled_maintenance": [
+          {
+            "id": "maint_001",
+            "type": "database_backup",
+            "scheduled": "2025-09-14T02:00:00Z",
+            "duration": "30_minutes",
+            "impact": "none",
+            "status": "scheduled"
+          },
+          {
+            "id": "maint_002",
+            "type": "security_update",
+            "scheduled": "2025-09-15T01:00:00Z",
+            "duration": "15_minutes", 
+            "impact": "brief_downtime",
+            "status": "scheduled"
+          }
+        ],
+        "maintenance_history": [
+          {
+            "id": "maint_completed_001",
+            "type": "system_update",
+            "completed": "2025-09-12T02:00:00Z",
+            "duration": "45_minutes",
+            "status": "completed_successfully",
+            "notes": "Updated all dependencies, no issues"
+          }
+        ]
+      },
+      
+      "monitoring": {
+        "system_health": {
+          "overall_status": "healthy",
+          "cpu_usage": 0.25,
+          "memory_usage": 0.42,
+          "disk_usage": 0.18,
+          "network_latency": "12ms",
+          "response_time_p95": "245ms",
+          "error_rate": 0.001,
+          "uptime": 0.9975
+        },
+        "alerts": {
+          "active_alerts": [],
+          "recent_alerts": [
+            {
+              "id": "alert_001",
+              "type": "performance",
+              "severity": "warning",
+              "message": "Database query response time exceeded threshold",
+              "timestamp": "2025-09-12T15:30:00Z",
+              "resolved": "2025-09-12T16:15:00Z",
+              "resolution": "Added database index for property search queries"
+            }
+          ]
+        }
+      },
+      
+      "backup_strategy": {
+        "database_backups": {
+          "frequency": "daily_at_02:00",
+          "retention": "30_days_daily_12_months_weekly",
+          "last_backup": "2025-09-13T02:00:00Z",
+          "backup_size": "1.2GB",
+          "verification_status": "verified_successfully"
+        },
+        "file_backups": {
+          "frequency": "hourly_incremental_daily_full",
+          "retention": "7_days_full_30_days_incremental",
+          "last_backup": "2025-09-13T09:00:00Z",
+          "backup_size": "45MB",
+          "verification_status": "verified_successfully"
+        }
+      }
+    },
+    
+    "auditTrail": {
+      "user_actions": [
+        {
+          "timestamp": "2025-09-13T08:00:20Z",
+          "user_id": "admin_sarah_chen",
+          "action": "inquiry_response",
+          "resource": "inq_001",
+          "details": "Responded to customer inquiry via email",
+          "ip_address": "192.168.1.200",
+          "session_id": "session_admin_ghi789"
+        },
+        {
+          "timestamp": "2025-09-13T08:30:45Z",
+          "user_id": "admin_sarah_chen",
+          "action": "property_update",
+          "resource": "prop_002",
+          "details": "Updated property description and added new images",
+          "ip_address": "192.168.1.200",
+          "session_id": "session_admin_ghi789"
+        },
+        {
+          "timestamp": "2025-09-13T09:50:15Z",
+          "user_id": "admin_sarah_chen",
+          "action": "urgent_inquiry_response",
+          "resource": "inq_003",
+          "details": "Immediate phone response to high-priority inquiry",
+          "ip_address": "192.168.1.200",
+          "session_id": "session_admin_ghi789"
+        }
+      ],
+      "system_events": [
+        {
+          "timestamp": "2025-09-13T02:00:00Z",
+          "event": "scheduled_backup",
+          "status": "completed",
+          "details": "Daily database backup completed successfully",
+          "duration": "1800_seconds"
+        },
+        {
+          "timestamp": "2025-09-13T07:00:00Z",
+          "event": "system_startup",
+          "status": "completed",
+          "details": "All services started successfully",
+          "duration": "45_seconds"
+        }
+      ],
+      "security_events": [
+        {
+          "timestamp": "2025-09-13T07:30:00Z",
+          "event": "successful_login",
+          "user_id": "admin_sarah_chen",
+          "ip_address": "192.168.1.200",
+          "mfa_used": true,
+          "risk_score": 0.1
+        }
+      ]
+    },
+    
+    "permissions": {
+      "role_definitions": {
+        "super_admin": {
+          "description": "Full system access and administration",
+          "permissions": ["*"],
+          "restrictions": []
+        },
+        "admin": {
+          "description": "Administrative access to business operations",
+          "permissions": [
+            "property_management.*",
+            "inquiry_management.*",
+            "analytics.view_all",
+            "user_management.view_agents"
+          ],
+          "restrictions": ["system_configuration", "user_permissions"]
+        },
+        "senior_agent": {
+          "description": "Experienced agent with elevated privileges",
+          "permissions": [
+            "property_management.*",
+            "inquiry_management.*",
+            "analytics.view_reports"
+          ],
+          "restrictions": ["user_management.*", "system.*"]
+        },
+        "agent": {
+          "description": "Standard real estate agent access",
+          "permissions": [
+            "property_management.crud",
+            "inquiry_management.assigned_only",
+            "analytics.view_own"
+          ],
+          "restrictions": ["user_management.*", "system.*", "analytics.export"]
+        }
+      },
+      
+      "access_control": {
+        "session_timeout": "30_minutes",
+        "concurrent_sessions": 3,
+        "password_policy": {
+          "min_length": 12,
+          "require_uppercase": true,
+          "require_lowercase": true,
+          "require_numbers": true,
+          "require_symbols": true,
+          "history": 10
+        },
+        "mfa_requirement": "mandatory_for_admin_roles",
+        "ip_restrictions": {
+          "admin_users": "office_network_only",
+          "regular_users": "any_location"
+        }
+      }
+    }
+  }
+}

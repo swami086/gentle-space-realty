@@ -1,0 +1,42 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - button "Back to Home" [ref=e7] [cursor=pointer]:
+    - img
+    - generic [ref=e8] [cursor=pointer]: Back to Home
+  - generic [ref=e9]:
+    - generic [ref=e10]:
+      - img "Gentle Space Logo" [ref=e14]
+      - generic [ref=e15]: Admin Portal
+      - generic [ref=e16]: Secure Express API authentication for admin access
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - img [ref=e19]
+        - generic [ref=e21]:
+          - paragraph [ref=e22]: Secure Authentication
+          - paragraph [ref=e23]: Powered by Express API with JWT tokens
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Email Address
+          - generic [ref=e27]:
+            - img [ref=e28]
+            - textbox "Email Address" [ref=e31]
+        - generic [ref=e32]:
+          - generic [ref=e33]: Password
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - textbox "Password" [ref=e38]
+        - button "Sign In with Email" [ref=e39] [cursor=pointer]:
+          - img
+          - text: Sign In with Email
+      - generic [ref=e44]: Or continue with
+      - generic [ref=e45]:
+        - button "Google Sign-in (Coming Soon)" [disabled]:
+          - img
+          - text: Google Sign-in (Coming Soon)
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: 🚧 Google OAuth Migration
+          - paragraph [ref=e48]: Google authentication is being migrated to the Express API. Please use email/password authentication for now.
+          - paragraph [ref=e49]: OAuth integration will be available soon.
+```

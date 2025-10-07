@@ -1,0 +1,12 @@
+{
+  "searchParams": {
+    "location": "Bangalore",
+    "propertyType": "office",
+    "minPrice": 50000,
+    "maxPrice": 200000,
+    "furnished": "furnished"
+  },
+  "useCrawl": false,
+  "maxPages": 1,
+  "waitFor": 3000
+}

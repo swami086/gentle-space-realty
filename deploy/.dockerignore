@@ -1,0 +1,2 @@
+# Ignore root .env file to prevent overriding production config
+../.env

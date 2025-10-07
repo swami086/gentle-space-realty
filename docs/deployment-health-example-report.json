@@ -1,0 +1,163 @@
+{
+  "timestamp": "2025-09-14T07:38:17.683Z",
+  "baseUrl": "https://gentle-space-realty.vercel.app",
+  "duration": 12453,
+  "healthScore": 95,
+  "overallStatus": "healthy",
+  "summary": {
+    "total": 18,
+    "passed": 16,
+    "failed": 1,
+    "warnings": 1,
+    "critical": 6,
+    "criticalFailed": 0
+  },
+  "tests": {
+    "api": [
+      {
+        "name": "Health Check",
+        "url": "/api/health",
+        "method": "GET",
+        "critical": true,
+        "status": "pass",
+        "statusCode": 200,
+        "responseTime": 245,
+        "ttfb": 245,
+        "details": [],
+        "responseData": {
+          "status": "healthy",
+          "timestamp": "2025-09-14T07:38:17.683Z",
+          "database": {
+            "status": "connected",
+            "project_ref": "nfryqqpfprupwqayirnc",
+            "supabase_url": "https://nfryqqpfprupwqayirnc.supabase.co"
+          }
+        }
+      },
+      {
+        "name": "Properties API",
+        "url": "/api/properties",
+        "method": "GET",
+        "critical": true,
+        "status": "pass",
+        "statusCode": 200,
+        "responseTime": 312,
+        "ttfb": 312,
+        "details": []
+      },
+      {
+        "name": "Inquiries API",
+        "url": "/api/inquiries",
+        "method": "POST",
+        "critical": true,
+        "status": "pass",
+        "statusCode": 400,
+        "responseTime": 189,
+        "ttfb": 189,
+        "details": ["Expected validation error for test data"]
+      }
+    ],
+    "routes": [
+      {
+        "name": "Home Page",
+        "url": "/",
+        "critical": true,
+        "status": "pass",
+        "statusCode": 200,
+        "responseTime": 456,
+        "details": []
+      },
+      {
+        "name": "Properties Page",
+        "url": "/properties",
+        "critical": true,
+        "status": "pass",
+        "statusCode": 200,
+        "responseTime": 423,
+        "details": []
+      },
+      {
+        "name": "Admin Page",
+        "url": "/admin",
+        "critical": true,
+        "status": "pass",
+        "statusCode": 200,
+        "responseTime": 378,
+        "details": []
+      }
+    ],
+    "database": {
+      "name": "Supabase Database Connection",
+      "status": "pass",
+      "details": ["All database connectivity tests passed"],
+      "tests": {
+        "healthEndpoint": {
+          "status": "pass",
+          "responseTime": 245,
+          "supabase_url": "https://nfryqqpfprupwqayirnc.supabase.co",
+          "project_ref": "nfryqqpfprupwqayirnc",
+          "connection_status": "connected",
+          "details": ["Database connection successful via health endpoint"]
+        },
+        "supabaseMcp": {
+          "status": "pass",
+          "supabase_url": "https://nfryqqpfprupwqayirnc.supabase.co",
+          "details": ["MCP server connection successful"]
+        },
+        "directConnection": {
+          "status": "pass",
+          "responseTime": 312,
+          "statusCode": 200,
+          "details": ["Database queries working via properties endpoint"]
+        }
+      }
+    },
+    "cors": {
+      "name": "CORS Headers",
+      "status": "warning",
+      "details": ["CORS allows all origins - consider restricting for production"],
+      "headers": {
+        "access-control-allow-origin": "*",
+        "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+        "access-control-allow-headers": "Content-Type,Authorization"
+      }
+    },
+    "environment": [
+      {
+        "name": "Environment Variable: VITE_SUPABASE_URL",
+        "variable": "VITE_SUPABASE_URL",
+        "status": "pass",
+        "value": "https://nfryqqpfprupwqayirnc.supabase.co",
+        "details": ["Environment variable is set correctly"]
+      },
+      {
+        "name": "Environment Variable: VITE_SUPABASE_ANON_KEY",
+        "variable": "VITE_SUPABASE_ANON_KEY",
+        "status": "pass",
+        "value": "***REDACTED***",
+        "details": ["Environment variable is set correctly"]
+      }
+    ],
+    "performance": {
+      "Home Page Load": {
+        "responseTime": 456,
+        "totalTime": 465,
+        "statusCode": 200,
+        "status": "pass"
+      },
+      "API Response Time": {
+        "responseTime": 245,
+        "totalTime": 252,
+        "statusCode": 200,
+        "status": "pass"
+      },
+      "Properties Page Load": {
+        "responseTime": 423,
+        "totalTime": 431,
+        "statusCode": 200,
+        "status": "pass"
+      }
+    }
+  },
+  "errors": []
+}

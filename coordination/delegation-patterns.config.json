@@ -1,0 +1,130 @@
+{
+  "delegationPatterns": {
+    "taskAssignmentAlgorithm": {
+      "strategy": "capability_weighted_scoring",
+      "factors": {
+        "capability_match": 0.4,
+        "current_workload": 0.25,
+        "performance_history": 0.2,
+        "domain_expertise": 0.15
+      },
+      "loadBalancing": {
+        "enabled": true,
+        "threshold": 0.8,
+        "redistribution": "automatic",
+        "cooldown": "5min"
+      }
+    },
+    "taskTypes": {
+      "feature_development": {
+        "primary_agent": "domain_specific",
+        "collaboration_required": true,
+        "review_stages": ["security", "testing", "performance"],
+        "estimated_duration": "3-5_days",
+        "complexity_factors": ["ui_complexity", "api_integration", "data_model_changes"]
+      },
+      "bug_fixes": {
+        "primary_agent": "analyzer_first",
+        "escalation_path": ["domain_expert", "queen_coordinator"],
+        "review_stages": ["root_cause", "fix_validation", "regression_test"],
+        "estimated_duration": "4-8_hours",
+        "priority_matrix": ["severity", "user_impact", "system_stability"]
+      },
+      "performance_optimization": {
+        "primary_agent": "performance_specialist",
+        "collaboration_agents": ["database", "frontend", "backend"],
+        "review_stages": ["benchmark", "implementation", "validation"],
+        "estimated_duration": "2-4_days",
+        "success_metrics": ["load_time", "throughput", "resource_usage"]
+      },
+      "security_hardening": {
+        "primary_agent": "securityQueen",
+        "mandatory_review": true,
+        "collaboration_agents": ["backend", "database", "testing"],
+        "review_stages": ["threat_model", "implementation", "penetration_test"],
+        "estimated_duration": "1-3_days",
+        "compliance_checks": ["owasp", "gdpr", "security_best_practices"]
+      }
+    },
+    "workflowOrchestration": {
+      "sequentialTasks": {
+        "dependencies": "automatic_detection",
+        "blocking_resolution": "queen_escalation",
+        "progress_tracking": "milestone_based",
+        "handoff_protocol": "validation_gates"
+      },
+      "parallelTasks": {
+        "conflict_detection": "resource_overlap_analysis",
+        "synchronization_points": "integration_milestones",
+        "communication_overhead": "minimized_updates",
+        "resource_contention": "priority_based_allocation"
+      }
+    }
+  },
+  "distributionMechanisms": {
+    "taskQueue": {
+      "prioritization": "weighted_scoring",
+      "scheduling": "capacity_aware",
+      "preemption": "critical_tasks_only",
+      "batching": "logical_grouping"
+    },
+    "resourceAllocation": {
+      "cpu_time": "dynamic_scaling",
+      "memory_usage": "monitored_limits",
+      "io_operations": "throttled_queuing",
+      "network_bandwidth": "priority_based"
+    },
+    "coordinationOverhead": {
+      "communication_frequency": "event_driven",
+      "status_updates": "change_based",
+      "progress_reporting": "automated_metrics",
+      "meeting_cadence": "milestone_triggered"
+    }
+  },
+  "escalationProtocols": {
+    "performance_degradation": {
+      "threshold": "20%_slower_than_baseline",
+      "action": "immediate_analysis",
+      "responsible_agent": "performance_queen",
+      "resolution_time": "2_hours"
+    },
+    "quality_gate_failure": {
+      "threshold": "below_90%_standards",
+      "action": "task_reassignment",
+      "responsible_agent": "testing_queen",
+      "resolution_time": "4_hours"
+    },
+    "security_vulnerability": {
+      "threshold": "medium_severity_or_higher", 
+      "action": "immediate_containment",
+      "responsible_agent": "security_queen",
+      "resolution_time": "1_hour"
+    },
+    "dependency_blocking": {
+      "threshold": "24_hour_delay",
+      "action": "alternative_path_analysis",
+      "responsible_agent": "queen_coordinator",
+      "resolution_time": "2_hours"
+    }
+  },
+  "feedbackLoops": {
+    "performance_metrics": {
+      "collection": "continuous",
+      "analysis": "daily",
+      "adjustment": "weekly",
+      "reporting": "milestone_based"
+    },
+    "quality_metrics": {
+      "collection": "per_task",
+      "analysis": "daily",
+      "adjustment": "immediate",
+      "reporting": "weekly"
+    },
+    "efficiency_metrics": {
+      "collection": "continuous",
+      "analysis": "weekly",
+      "adjustment": "monthly",
+      "reporting": "quarterly"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "communicationProtocols": {
+    "architecturePattern": "star_topology_with_peer_mesh",
+    "primaryChannels": {
+      "queen_to_worker": {
+        "protocol": "command_dispatch",
+        "format": "structured_json",
+        "priority_levels": ["critical", "high", "normal", "low"],
+        "acknowledgment": "required",
+        "timeout": "30_seconds",
+        "retry_policy": "exponential_backoff"
+      },
+      "worker_to_queen": {
+        "protocol": "status_reporting",
+        "format": "standardized_metrics",
+        "frequency": "event_driven",
+        "batch_updates": true,
+        "compression": "enabled",
+        "encryption": "internal_only"
+      },
+      "worker_to_worker": {
+        "protocol": "peer_collaboration",
+        "format": "domain_specific",
+        "mediation": "queen_coordination",
+        "conflict_resolution": "escalation_path",
+        "knowledge_sharing": "bidirectional",
+        "resource_sharing": "negotiated"
+      }
+    },
+    "messageTypes": {
+      "task_assignment": {
+        "structure": {
+          "task_id": "unique_identifier",
+          "task_type": "category_enum",
+          "priority": "numeric_scale_1_10",
+          "requirements": "detailed_specification",
+          "dependencies": "task_id_list",
+          "deadline": "iso_timestamp",
+          "resources": "allocation_limits",
+          "success_criteria": "measurable_outcomes"
+        },
+        "validation": "schema_enforced",
+        "routing": "capability_based"
+      },
+      "status_update": {
+        "structure": {
+          "agent_id": "worker_identifier", 
+          "task_id": "current_task",
+          "progress": "percentage_complete",
+          "blockers": "issue_list",
+          "eta": "estimated_completion",
+          "resource_usage": "current_consumption",
+          "quality_metrics": "performance_indicators",
+          "next_actions": "planned_steps"
+        },
+        "frequency": "every_15_minutes_active",
+        "aggregation": "queen_level_dashboard"
+      },
+      "collaboration_request": {
+        "structure": {
+          "requesting_agent": "source_identifier",
+          "target_agent": "destination_identifier",
+          "collaboration_type": "assistance_category",
+          "context": "current_task_state",
+          "specific_need": "detailed_requirement",
+          "urgency": "priority_level",
+          "estimated_duration": "time_requirement",
+          "mutual_benefit": "value_proposition"
+        },
+        "mediation": "queen_approval",
+        "tracking": "collaboration_metrics"
+      },
+      "escalation_alert": {
+        "structure": {
+          "alert_type": "issue_category",
+          "severity": "impact_level",
+          "affected_tasks": "task_list",
+          "root_cause": "analysis_summary",
+          "attempted_resolutions": "action_history",
+          "recommended_actions": "solution_options",
+          "timeline": "urgency_requirements",
+          "stakeholder_impact": "business_implications"
+        },
+        "routing": "immediate_queen_notification",
+        "response_sla": "severity_based_timing"
+      }
+    },
+    "coordinationMechanisms": {
+      "daily_standup": {
+        "participants": "all_active_agents",
+        "duration": "15_minutes_max",
+        "format": "structured_updates",
+        "agenda": ["progress", "blockers", "dependencies", "priorities"],
+        "automation": "status_pre_aggregation",
+        "scheduling": "adaptive_based_on_workload"
+      },
+      "milestone_sync": {
+        "trigger": "major_deliverable_completion",
+        "participants": "relevant_domain_experts",
+        "duration": "30_minutes_max",
+        "format": "demo_and_review",
+        "outcomes": ["quality_validation", "integration_planning", "next_phase_coordination"],
+        "documentation": "automated_meeting_notes"
+      },
+      "crisis_coordination": {
+        "trigger": "critical_issue_detection",
+        "assembly_time": "5_minutes_max",
+        "participants": "affected_agents_plus_queen",
+        "format": "rapid_response_protocol",
+        "decision_authority": "queen_has_final_word",
+        "resolution_tracking": "real_time_updates"
+      }
+    },
+    "informationFlow": {
+      "knowledge_base": {
+        "structure": "hierarchical_categorization",
+        "update_protocol": "agent_contributions",
+        "version_control": "change_tracking",
+        "access_control": "role_based_permissions",
+        "search_capability": "semantic_indexing",
+        "maintenance": "automated_cleanup"
+      },
+      "context_sharing": {
+        "project_state": "real_time_dashboard",
+        "task_dependencies": "visual_dependency_graph",
+        "resource_allocation": "capacity_planning_view",
+        "performance_metrics": "trend_analysis",
+        "quality_indicators": "health_score_dashboard",
+        "risk_assessment": "early_warning_system"
+      },
+      "decision_trail": {
+        "logging": "all_significant_decisions",
+        "rationale": "context_and_reasoning",
+        "alternatives": "options_considered",
+        "outcomes": "results_tracking",
+        "lessons_learned": "improvement_insights",
+        "searchability": "indexed_decision_database"
+      }
+    }
+  },
+  "performanceOptimization": {
+    "messageCompression": {
+      "algorithm": "adaptive_based_on_content",
+      "threshold": "1kb_message_size",
+      "ratio": "target_70%_reduction",
+      "decompression": "automatic_on_receipt"
+    },
+    "batchProcessing": {
+      "status_updates": "5_minute_intervals",
+      "low_priority_messages": "15_minute_intervals",
+      "bulk_operations": "off_peak_scheduling",
+      "resource_optimization": "message_aggregation"
+    },
+    "caching": {
+      "frequently_accessed": "local_agent_cache",
+      "shared_resources": "distributed_cache",
+      "ttl_policy": "content_type_based",
+      "invalidation": "event_driven_updates"
+    }
+  },
+  "reliabilityFeatures": {
+    "fault_tolerance": {
+      "message_delivery": "at_least_once_guarantee",
+      "agent_failure": "automatic_task_reassignment", 
+      "network_partition": "local_queue_and_sync",
+      "data_consistency": "eventual_consistency_model"
+    },
+    "monitoring": {
+      "message_latency": "real_time_metrics",
+      "delivery_success_rate": "99.9%_target",
+      "agent_responsiveness": "health_checks",
+      "system_bottlenecks": "automated_detection"
+    },
+    "recovery": {
+      "message_replay": "from_last_checkpoint",
+      "state_restoration": "persistent_storage",
+      "graceful_degradation": "reduced_functionality_mode",
+      "automatic_healing": "self_correcting_protocols"
+    }
+  }
+}

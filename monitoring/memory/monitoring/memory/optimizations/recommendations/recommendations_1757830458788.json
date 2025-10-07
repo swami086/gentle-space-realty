@@ -1,0 +1,198 @@
+{
+  "timestamp": "2025-09-14T06:14:18.788Z",
+  "analysis": {
+    "timestamp": 1757830458788,
+    "memoryPressure": {
+      "level": "critical",
+      "systemUtilization": 0.9824049207899306,
+      "heapUtilization": 0.5213807436065966,
+      "availableMemory": 680132608,
+      "pressureScore": 0.9824049207899306,
+      "recommendation": "Immediate action required - clear caches, force GC, consider scaling"
+    },
+    "fragmentation": {
+      "score": 0.6013149052415566,
+      "level": "high",
+      "needsOptimization": true,
+      "heapFragmentation": 0.47861925639340347,
+      "rssFragmentation": 0.7240105540897097,
+      "optimizationUrgency": "high"
+    },
+    "leaks": {
+      "detected": false,
+      "score": 0
+    },
+    "performance": {
+      "degraded": true,
+      "degradationScore": 0.7824049207899306,
+      "currentEfficiency": 0.01759507921006942,
+      "baselineEfficiency": 0.8,
+      "impactLevel": "severe"
+    },
+    "trends": {
+      "direction": "stable",
+      "velocity": 0,
+      "confidence": 0.8,
+      "predictedPeak": null,
+      "timeToThreshold": null
+    },
+    "context": {
+      "sessionType": "unknown",
+      "workloadIntensity": "moderate",
+      "criticalityLevel": "normal",
+      "maintenanceWindow": false,
+      "resourceAvailability": "normal"
+    }
+  },
+  "recommendations": [
+    {
+      "id": "memory_pressure_1757830458788",
+      "type": "memory_pressure",
+      "priority": "critical",
+      "urgency": "immediate",
+      "title": "Critical Memory Pressure - Immediate Action Required",
+      "description": "System memory usage is critically high and may cause performance issues or crashes",
+      "actions": [
+        {
+          "type": "force_gc",
+          "description": "Force garbage collection to free up heap memory",
+          "automated": true,
+          "estimatedImpact": "medium",
+          "implementationTime": "immediate"
+        },
+        {
+          "type": "clear_caches",
+          "description": "Clear non-essential caches and temporary data",
+          "automated": true,
+          "estimatedImpact": "medium",
+          "implementationTime": "immediate"
+        },
+        {
+          "type": "memory_dump",
+          "description": "Create memory dump for analysis",
+          "automated": false,
+          "estimatedImpact": "none",
+          "implementationTime": "1 minute"
+        }
+      ],
+      "estimatedMemorySavings": "10-30%",
+      "riskLevel": "low",
+      "reversible": true,
+      "priorityScore": 150,
+      "impactScore": 40,
+      "riskScore": 2
+    },
+    {
+      "id": "performance_1757830458788",
+      "type": "performance_optimization",
+      "priority": "high",
+      "urgency": "urgent",
+      "title": "Performance Optimization Required",
+      "description": "Performance degradation of 78.2% detected",
+      "actions": [
+        {
+          "type": "memory_efficiency_tuning",
+          "description": "Optimize memory usage patterns for better performance",
+          "automated": false,
+          "estimatedImpact": "high",
+          "implementationTime": "1-3 hours"
+        },
+        {
+          "type": "cache_optimization",
+          "description": "Implement intelligent caching strategies",
+          "automated": false,
+          "estimatedImpact": "medium",
+          "implementationTime": "30 minutes - 1 hour"
+        }
+      ],
+      "estimatedPerformanceGain": "39%",
+      "riskLevel": "low",
+      "reversible": true,
+      "priorityScore": 104,
+      "impactScore": 50,
+      "riskScore": 2
+    },
+    {
+      "id": "fragmentation_1757830458788",
+      "type": "memory_fragmentation",
+      "priority": "high",
+      "urgency": "high",
+      "title": "Memory Fragmentation Optimization",
+      "description": "High memory fragmentation detected (60.1%)",
+      "actions": [
+        {
+          "type": "compact_heap",
+          "description": "Trigger heap compaction to reduce fragmentation",
+          "automated": true,
+          "estimatedImpact": "high",
+          "implementationTime": "30 seconds"
+        },
+        {
+          "type": "optimize_allocations",
+          "description": "Implement object pooling for frequently allocated objects",
+          "automated": false,
+          "estimatedImpact": "high",
+          "implementationTime": "1-2 hours"
+        },
+        {
+          "type": "adjust_gc_parameters",
+          "description": "Optimize garbage collection parameters for reduced fragmentation",
+          "automated": false,
+          "estimatedImpact": "medium",
+          "implementationTime": "15 minutes"
+        }
+      ],
+      "estimatedFragmentationReduction": "30-60%",
+      "riskLevel": "low",
+      "reversible": true,
+      "priorityScore": 80,
+      "impactScore": 80,
+      "riskScore": 2
+    },
+    {
+      "id": "checkpoint_optimization_1757830458788",
+      "type": "checkpoint_optimization",
+      "priority": "low",
+      "urgency": "low",
+      "title": "Checkpoint Size Optimization",
+      "description": "Optimize checkpoint sizes for better memory efficiency",
+      "actions": [
+        {
+          "type": "implement_checkpoint_compression",
+          "description": "Enable compression for memory checkpoints",
+          "automated": true,
+          "estimatedImpact": "medium",
+          "implementationTime": "immediate"
+        },
+        {
+          "type": "optimize_checkpoint_frequency",
+          "description": "Adjust checkpoint frequency based on memory patterns",
+          "automated": false,
+          "estimatedImpact": "low",
+          "implementationTime": "15 minutes"
+        }
+      ],
+      "estimatedStorageSavings": "30-50%",
+      "riskLevel": "very low",
+      "reversible": true,
+      "priorityScore": 32,
+      "impactScore": 30,
+      "riskScore": 1
+    }
+  ],
+  "metadata": {
+    "totalRecommendations": 4,
+    "priorities": {
+      "critical": 1,
+      "high": 2,
+      "low": 1
+    },
+    "types": {
+      "memory_pressure": 1,
+      "performance_optimization": 1,
+      "memory_fragmentation": 1,
+      "checkpoint_optimization": 1
+    },
+    "autoImplementable": 3
+  }
+}

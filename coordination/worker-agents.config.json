@@ -1,0 +1,200 @@
+{
+  "workerAgents": {
+    "frontendQueen": {
+      "name": "Frontend Development Queen",
+      "domain": "user_interface",
+      "specialization": "react_typescript_ui",
+      "capabilities": [
+        "component_development",
+        "responsive_design",
+        "accessibility_compliance",
+        "state_management",
+        "ui_testing",
+        "performance_optimization"
+      ],
+      "tools": ["vite", "react", "typescript", "tailwind", "framer-motion", "radix-ui"],
+      "responsibilities": [
+        "React component architecture",
+        "Responsive layout implementation", 
+        "UI/UX consistency enforcement",
+        "Frontend performance optimization",
+        "Component testing strategies",
+        "Accessibility standard compliance"
+      ],
+      "workloadCapacity": {
+        "concurrent_tasks": 3,
+        "complexity_rating": "high",
+        "estimated_throughput": "5_components_per_day"
+      },
+      "qualityStandards": {
+        "wcag_compliance": "AA",
+        "performance_budget": "3s_load_time",
+        "test_coverage": 85,
+        "component_reusability": 90
+      }
+    },
+    "backendQueen": {
+      "name": "Backend API Queen", 
+      "domain": "server_side_logic",
+      "specialization": "node_express_api",
+      "capabilities": [
+        "api_development",
+        "authentication_systems",
+        "data_validation",
+        "security_implementation",
+        "performance_tuning",
+        "error_handling"
+      ],
+      "tools": ["express", "typescript", "jwt", "bcrypt", "joi", "helmet"],
+      "responsibilities": [
+        "RESTful API design and implementation",
+        "Authentication and authorization systems",
+        "Input validation and sanitization",
+        "Security middleware implementation",
+        "API performance optimization",
+        "Error handling and logging"
+      ],
+      "workloadCapacity": {
+        "concurrent_tasks": 4,
+        "complexity_rating": "high",
+        "estimated_throughput": "8_endpoints_per_day"
+      },
+      "qualityStandards": {
+        "response_time": "200ms_avg",
+        "security_score": 95,
+        "error_rate": "0.1%",
+        "api_documentation": 100
+      }
+    },
+    "databaseQueen": {
+      "name": "Database Architecture Queen",
+      "domain": "data_management", 
+      "specialization": "postgresql_optimization",
+      "capabilities": [
+        "schema_design",
+        "query_optimization",
+        "migration_management",
+        "data_integrity",
+        "performance_tuning",
+        "backup_strategies"
+      ],
+      "tools": ["postgresql", "redis", "migration-scripts", "query-analyzer"],
+      "responsibilities": [
+        "Database schema design and evolution",
+        "Query performance optimization",
+        "Data migration strategies",
+        "Indexing and constraint management",
+        "Cache layer implementation",
+        "Data backup and recovery planning"
+      ],
+      "workloadCapacity": {
+        "concurrent_tasks": 2,
+        "complexity_rating": "very_high", 
+        "estimated_throughput": "3_major_schema_changes_per_day"
+      },
+      "qualityStandards": {
+        "query_performance": "50ms_avg",
+        "data_consistency": 100,
+        "backup_recovery": "15min_rto",
+        "schema_documentation": 95
+      }
+    },
+    "testingQueen": {
+      "name": "Quality Assurance Queen",
+      "domain": "testing_validation",
+      "specialization": "comprehensive_testing",
+      "capabilities": [
+        "unit_testing",
+        "integration_testing",
+        "e2e_testing",
+        "performance_testing",
+        "security_testing",
+        "test_automation"
+      ],
+      "tools": ["jest", "supertest", "k6", "artillery", "semgrep", "playwright"],
+      "responsibilities": [
+        "Test strategy development",
+        "Unit and integration test implementation",
+        "End-to-end workflow validation",
+        "Performance benchmark establishment",
+        "Security vulnerability scanning",
+        "Continuous testing pipeline setup"
+      ],
+      "workloadCapacity": {
+        "concurrent_tasks": 3,
+        "complexity_rating": "high",
+        "estimated_throughput": "20_test_cases_per_day"
+      },
+      "qualityStandards": {
+        "unit_test_coverage": 90,
+        "integration_coverage": 80, 
+        "e2e_critical_path": 100,
+        "performance_regression": 0,
+        "security_vulnerability": 0
+      }
+    },
+    "securityQueen": {
+      "name": "Security Enforcement Queen",
+      "domain": "security_compliance",
+      "specialization": "web_application_security", 
+      "capabilities": [
+        "threat_modeling",
+        "vulnerability_assessment",
+        "secure_coding_review",
+        "authentication_design",
+        "data_protection",
+        "compliance_validation"
+      ],
+      "tools": ["helmet", "semgrep", "jwt", "bcrypt", "audit-tools", "owasp-zap"],
+      "responsibilities": [
+        "Security architecture review",
+        "Vulnerability identification and remediation",
+        "Secure authentication implementation",
+        "Data encryption and protection",
+        "Compliance standard verification",
+        "Security incident response planning"
+      ],
+      "workloadCapacity": {
+        "concurrent_tasks": 2,
+        "complexity_rating": "very_high",
+        "estimated_throughput": "5_security_reviews_per_day"
+      },
+      "qualityStandards": {
+        "vulnerability_score": 0,
+        "owasp_compliance": 100,
+        "data_encryption": 100,
+        "security_documentation": 95,
+        "incident_response_time": "1hr"
+      }
+    }
+  },
+  "collaborationMatrix": {
+    "primaryCollaborations": [
+      {
+        "agents": ["frontendQueen", "backendQueen"],
+        "interaction": "api_contract_coordination",
+        "frequency": "daily"
+      },
+      {
+        "agents": ["backendQueen", "databaseQueen"], 
+        "interaction": "data_layer_optimization",
+        "frequency": "continuous"
+      },
+      {
+        "agents": ["testingQueen", "all"],
+        "interaction": "quality_validation",
+        "frequency": "per_feature"
+      },
+      {
+        "agents": ["securityQueen", "all"],
+        "interaction": "security_review",
+        "frequency": "per_milestone"
+      }
+    ],
+    "crossTraining": {
+      "enabled": true,
+      "sharingProtocol": "knowledge_base_updates",
+      "mentorship": "peer_to_peer"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "key": "swarm/config",
+      "value": "{\"topology\": \"adaptive-mesh\", \"agents\": 5, \"project\": \"gentle-space-realty\", \"coordination\": \"mesh\", \"tracking\": \"dependency-based\"}",
+      "namespace": "default",
+      "timestamp": 1758465410672
+    },
+    {
+      "key": "swarm/agents",
+      "value": "{\"env-config\": {\"type\": \"system-architect\", \"priority\": \"high\", \"dependencies\": []}, \"database-storage\": {\"type\": \"backend-dev\", \"priority\": \"high\", \"dependencies\": [\"env-config\"]}, \"api-services\": {\"type\": \"coder\", \"priority\": \"high\", \"dependencies\": [\"database-storage\"]}, \"testing-infra\": {\"type\": \"tester\", \"priority\": \"high\", \"dependencies\": [\"api-services\"]}, \"docs-setup\": {\"type\": \"reviewer\", \"priority\": \"medium\", \"dependencies\": [\"testing-infra\"]}}",
+      "namespace": "default",
+      "timestamp": 1758465442002
+    }
+  ]
+}

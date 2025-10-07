@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "timestamp": "2025-09-14T06:55:45.211Z",
+    "totalTests": 19,
+    "passedTests": 6,
+    "failedTests": 13,
+    "passRate": 32
+  },
+  "tests": [
+    {
+      "test": "Database Connection",
+      "passed": false,
+      "message": "Connection failed: ",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.762Z"
+    },
+    {
+      "test": "Table: users",
+      "passed": false,
+      "message": "Table access failed: Invalid API key",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.814Z"
+    },
+    {
+      "test": "Table: properties",
+      "passed": false,
+      "message": "Table access failed: Invalid API key",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.866Z"
+    },
+    {
+      "test": "Table: property_images",
+      "passed": false,
+      "message": "Table access failed: Invalid API key",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.890Z"
+    },
+    {
+      "test": "Table: inquiries",
+      "passed": false,
+      "message": "Table access failed: Invalid API key",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.909Z"
+    },
+    {
+      "test": "Table: analytics_events",
+      "passed": false,
+      "message": "Table access failed: Invalid API key",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.949Z"
+    },
+    {
+      "test": "RLS Public Read: properties",
+      "passed": false,
+      "message": "Unexpected access restriction: Invalid API key",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.965Z"
+    },
+    {
+      "test": "RLS Protection: inquiries",
+      "passed": false,
+      "message": "May have insufficient RLS protection",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:44.984Z"
+    },
+    {
+      "test": "RLS Protection: users",
+      "passed": false,
+      "message": "May have insufficient RLS protection",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.002Z"
+    },
+    {
+      "test": "RLS Protection: property_images",
+      "passed": false,
+      "message": "May have insufficient RLS protection",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.019Z"
+    },
+    {
+      "test": "RLS Protection: analytics_events",
+      "passed": false,
+      "message": "May have insufficient RLS protection",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.041Z"
+    },
+    {
+      "test": "Storage Access",
+      "passed": false,
+      "message": "Storage access failed: signature verification failed",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.187Z"
+    },
+    {
+      "test": "Real-time Connection",
+      "passed": false,
+      "message": "Real-time subscription failed",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.210Z"
+    },
+    {
+      "test": "Environment File",
+      "passed": true,
+      "message": "Production environment file exists",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.210Z"
+    },
+    {
+      "test": "TypeScript Definitions",
+      "passed": true,
+      "message": "Supabase types file exists",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.210Z"
+    },
+    {
+      "test": "Config: src/lib/supabaseClient.ts",
+      "passed": true,
+      "message": "Configuration file exists",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.210Z"
+    },
+    {
+      "test": "Config: src/hooks/useSupabaseAuth.ts",
+      "passed": true,
+      "message": "Configuration file exists",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.211Z"
+    },
+    {
+      "test": "Config: src/hooks/useSupabaseRealtime.ts",
+      "passed": true,
+      "message": "Configuration file exists",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.211Z"
+    },
+    {
+      "test": "Config: src/services/supabaseService.ts",
+      "passed": true,
+      "message": "Configuration file exists",
+      "details": null,
+      "timestamp": "2025-09-14T06:55:45.211Z"
+    }
+  ]
+}

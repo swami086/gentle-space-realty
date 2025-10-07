@@ -1,0 +1,50 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": false,
+    "incremental": true
+  },
+  "include": [
+    "src/server.ts",
+    "src/config/**/*",
+    "src/db/**/*",
+    "src/dto/**/*",
+    "src/middleware/**/*",
+    "src/routes/**/*",
+    "src/services/**/*"
+  ],
+  "exclude": [
+    "src/components",
+    "src/pages", 
+    "src/hooks",
+    "src/store",
+    "src/data",
+    "src/lib",
+    "src/types/property.ts",
+    "src/index.tsx",
+    "src/App.tsx",
+    "node_modules",
+    "dist",
+    "build"
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
+}

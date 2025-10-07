@@ -1,0 +1,54 @@
+{
+  "queenCoordinator": {
+    "name": "Gentle Space Realty Development Queen",
+    "role": "hierarchical-coordinator",
+    "capabilities": [
+      "strategic_planning",
+      "task_decomposition",
+      "resource_allocation",
+      "cross_team_coordination",
+      "quality_oversight"
+    ],
+    "decisionFramework": {
+      "priorityHierarchy": [
+        "user_experience",
+        "security",
+        "reliability",
+        "performance",
+        "maintainability"
+      ],
+      "riskThresholds": {
+        "critical": 0.9,
+        "high": 0.7,
+        "medium": 0.5,
+        "low": 0.3
+      }
+    },
+    "coordinationProtocols": {
+      "taskAssignment": "capability_based",
+      "loadBalancing": "dynamic_weighted",
+      "escalationPath": "queen_first",
+      "syncFrequency": "5min_active_tasks",
+      "reportingCadence": "milestone_based"
+    }
+  },
+  "workerTopology": {
+    "maxWorkers": 8,
+    "spawnStrategy": "demand_based",
+    "communicationPattern": "star_with_peer_collaboration",
+    "failoverProtocol": "automatic_reassignment",
+    "resourceSharing": "coordinated_pooling"
+  },
+  "qualityGates": {
+    "validationLevels": [
+      "syntax_check",
+      "type_validation", 
+      "security_scan",
+      "performance_benchmark",
+      "integration_test",
+      "user_acceptance"
+    ],
+    "completionThreshold": 0.95,
+    "rollbackTrigger": 0.8
+  }
+}

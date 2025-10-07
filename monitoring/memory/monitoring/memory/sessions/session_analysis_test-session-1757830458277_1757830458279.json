@@ -1,0 +1,58 @@
+{
+  "sessionId": "test-session-1757830458277",
+  "duration": 0,
+  "snapshotCount": 5,
+  "memoryAnalysis": {
+    "initial": 1000000,
+    "final": 1400000,
+    "peak": 1400000,
+    "minimum": 1000000,
+    "average": 1200000,
+    "variance": 20000000000,
+    "trend": {
+      "direction": "increasing",
+      "strength": 0.08333333333333333,
+      "slope": 100000
+    },
+    "stability": 0.882148869802242
+  },
+  "growthAnalysis": {
+    "totalGrowth": 0.4,
+    "avgGrowthRate": 0.08846153846153847,
+    "peakMemory": 1400000,
+    "phaseCount": 1,
+    "phaseAnalysis": {
+      "stable": 1,
+      "normal": 0,
+      "concerning": 0,
+      "critical": 0,
+      "shrinking": 0
+    },
+    "longestPhase": {}
+  },
+  "fragmentationAnalysis": {
+    "average": 0.1,
+    "peak": 0.1,
+    "trend": {
+      "direction": "stable",
+      "strength": 0,
+      "slope": 0
+    },
+    "highFragmentationPeriods": 0,
+    "fragmentationStability": 1
+  },
+  "performanceCorrelations": {
+    "taskCompletion": {
+      "insufficient_data": true
+    }
+  },
+  "recommendations": [
+    {
+      "type": "concerning_growth",
+      "priority": "medium",
+      "message": "Session shows concerning memory growth pattern",
+      "action": "Monitor closely and consider memory optimization"
+    }
+  ],
+  "healthScore": 0.78
+}

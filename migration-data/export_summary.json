@@ -1,0 +1,135 @@
+{
+  "exportDate": "2025-09-28T14:10:41.897Z",
+  "tables": [
+    {
+      "name": "properties",
+      "recordCount": 18,
+      "sampleRecord": [
+        "id",
+        "title",
+        "description",
+        "price",
+        "location",
+        "address",
+        "bedrooms",
+        "bathrooms",
+        "area_sqft",
+        "lot_size_sqft",
+        "property_type",
+        "status",
+        "featured",
+        "images",
+        "amenities",
+        "features",
+        "virtual_tour_url",
+        "year_built",
+        "parking_spaces",
+        "hoa_fees",
+        "property_taxes",
+        "listing_agent_id",
+        "created_at",
+        "updated_at",
+        "approximate_location",
+        "coordinates",
+        "availability_status",
+        "place_id",
+        "formatted_address",
+        "place_types",
+        "city",
+        "state",
+        "country"
+      ]
+    },
+    {
+      "name": "users",
+      "recordCount": 10,
+      "sampleRecord": [
+        "id",
+        "email",
+        "name",
+        "role",
+        "is_active",
+        "last_login",
+        "failed_login_attempts",
+        "locked_until",
+        "created_at",
+        "updated_at",
+        "firebase_uid",
+        "is_test_account",
+        "saved_properties"
+      ]
+    },
+    {
+      "name": "testimonials",
+      "recordCount": 11,
+      "sampleRecord": [
+        "id",
+        "name",
+        "company",
+        "role",
+        "content",
+        "rating",
+        "email",
+        "phone",
+        "status",
+        "created_at",
+        "updated_at",
+        "approved_at",
+        "approved_by",
+        "rejection_reason"
+      ]
+    },
+    {
+      "name": "inquiries",
+      "recordCount": 16,
+      "sampleRecord": [
+        "id",
+        "property_id",
+        "name",
+        "email",
+        "phone",
+        "message",
+        "inquiry_type",
+        "status",
+        "priority",
+        "source",
+        "assigned_to",
+        "contacted_at",
+        "notes",
+        "ip_address",
+        "user_agent",
+        "created_at",
+        "updated_at",
+        "company"
+      ]
+    },
+    {
+      "name": "faqs",
+      "recordCount": 14,
+      "sampleRecord": [
+        "id",
+        "question",
+        "answer",
+        "category_id",
+        "order",
+        "is_active",
+        "created_by",
+        "updated_by",
+        "created_at",
+        "updated_at"
+      ]
+    },
+    {
+      "name": "faq_categories",
+      "recordCount": 1,
+      "sampleRecord": [
+        "id",
+        "name",
+        "order",
+        "is_active",
+        "created_at",
+        "updated_at"
+      ]
+    }
+  ]
+}

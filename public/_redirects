@@ -1,0 +1,21 @@
+# Netlify/Vercel style redirects for SPA routing fallback
+# This file provides additional routing support for single-page application
+
+# API routes should be handled by Vercel functions (defined in vercel.json)
+/api/debug       /api/debug.js      200
+/api/health      /api/health.js     200
+/api/auth/*      /api/auth.js       200
+/api/properties  /api/properties.js 200
+/api/inquiries*  /api/inquiries-simple.js 200
+
+# SPA routing - all non-API routes should serve index.html
+/admin/*         /index.html        200
+/properties/*    /index.html        200
+/about           /index.html        200
+/contact         /index.html        200
+
+# Catch-all for SPA routing
+/*               /index.html        200
+
+# Legacy redirects
+/login           /admin             301!

@@ -1,0 +1,198 @@
+{
+  "topologyEngine": {
+    "adaptationEnabled": true,
+    "realTimeOptimization": true,
+    "performanceMonitoring": true,
+    "faultTolerance": true,
+    "loadBalancing": true
+  },
+  "topologyPatterns": {
+    "hierarchical": {
+      "description": "Centralized coordination for complex property management operations",
+      "useCases": [
+        "property_crud_operations",
+        "inquiry_processing_with_validation",
+        "admin_dashboard_coordination",
+        "database_consistency_operations"
+      ],
+      "coordinator": {
+        "role": "master_coordinator",
+        "capabilities": ["task_distribution", "validation_oversight", "error_recovery"],
+        "maxSubordinates": 8
+      },
+      "activationConditions": {
+        "complexity_score": ">= 0.7",
+        "interdependencies": ">= 0.6",
+        "data_consistency_required": true,
+        "coordination_overhead_acceptable": true
+      }
+    },
+    "mesh": {
+      "description": "Distributed processing for independent property operations",
+      "useCases": [
+        "parallel_property_search",
+        "concurrent_image_processing",
+        "distributed_analytics_computation",
+        "load_testing_coordination"
+      ],
+      "peering": {
+        "maxPeers": 12,
+        "communicationProtocol": "direct_messaging",
+        "loadSharing": true,
+        "faultTolerance": "peer_redundancy"
+      },
+      "activationConditions": {
+        "parallelizable_tasks": ">= 0.8",
+        "fault_tolerance_priority": true,
+        "network_partition_risk": "> 0.3",
+        "independent_processing_available": true
+      }
+    },
+    "ring": {
+      "description": "Sequential processing for ordered property operations",
+      "useCases": [
+        "property_validation_pipeline",
+        "image_optimization_workflow",
+        "inquiry_notification_chain",
+        "deployment_sequence"
+      ],
+      "pipeline": {
+        "stageCount": 6,
+        "backpressureHandling": true,
+        "ordered_execution": true,
+        "stage_validation": true
+      },
+      "activationConditions": {
+        "sequential_processing_required": true,
+        "pipeline_optimization_possible": true,
+        "memory_constraints": "> 0.6",
+        "ordered_execution_mandatory": true
+      }
+    },
+    "hybrid": {
+      "description": "Mixed topology for complex real estate domain operations",
+      "useCases": [
+        "property_search_with_analytics",
+        "multi_tenant_admin_operations",
+        "real_time_inquiry_processing",
+        "cross_functional_testing"
+      ],
+      "configuration": {
+        "primary_topology": "hierarchical",
+        "secondary_patterns": ["mesh", "ring"],
+        "dynamic_switching": true,
+        "transition_smoothing": true
+      },
+      "activationConditions": {
+        "mixed_workload_characteristics": true,
+        "multiple_optimization_objectives": "> 2",
+        "domain_complexity": ">= 0.8",
+        "adaptive_requirements": true
+      }
+    }
+  },
+  "realEstateSpecificPatterns": {
+    "property_management_coordination": {
+      "pattern": "hierarchical",
+      "coordinator_specialization": "property_domain_expert",
+      "validation_layers": ["data_integrity", "business_rules", "compliance"],
+      "consistency_requirements": "strong_consistency"
+    },
+    "search_and_filtering": {
+      "pattern": "mesh",
+      "distribution_strategy": "location_based_sharding",
+      "caching_coordination": "distributed_cache",
+      "performance_targets": {
+        "response_time": "< 500ms",
+        "throughput": "> 1000 req/sec"
+      }
+    },
+    "inquiry_processing": {
+      "pattern": "ring",
+      "pipeline_stages": [
+        "validation",
+        "property_matching", 
+        "notification_dispatch",
+        "admin_assignment",
+        "customer_confirmation",
+        "analytics_tracking"
+      ],
+      "fault_recovery": "stage_retry_with_backoff"
+    },
+    "analytics_computation": {
+      "pattern": "mesh",
+      "computation_distribution": "time_series_partitioning",
+      "aggregation_strategy": "map_reduce_pattern",
+      "real_time_updates": true
+    }
+  },
+  "performanceThresholds": {
+    "topology_switch_triggers": {
+      "performance_degradation": 0.25,
+      "error_rate_increase": 0.15,
+      "response_time_threshold": "2000ms",
+      "throughput_drop": 0.30,
+      "resource_utilization": 0.85
+    },
+    "optimization_targets": {
+      "frontend_response_time": "< 300ms",
+      "database_query_time": "< 100ms",
+      "api_response_time": "< 500ms",
+      "image_processing_time": "< 2000ms",
+      "notification_delivery": "< 5000ms"
+    }
+  },
+  "faultToleranceConfig": {
+    "automatic_recovery": {
+      "enabled": true,
+      "max_retry_attempts": 3,
+      "backoff_strategy": "exponential",
+      "circuit_breaker_threshold": 5,
+      "health_check_interval": "30s"
+    },
+    "failure_detection": {
+      "heartbeat_interval": "10s",
+      "timeout_threshold": "30s",
+      "failure_threshold": 3,
+      "recovery_validation": true
+    },
+    "redundancy_strategy": {
+      "coordinator_backup": true,
+      "peer_redundancy_factor": 2,
+      "data_replication": "async_with_validation",
+      "hot_standby_enabled": true
+    }
+  },
+  "domainSpecificCoordination": {
+    "bengaluru_location_routing": {
+      "geographic_partitioning": [
+        "mg-road", "indiranagar", "koramangala", 
+        "hsr-layout", "whitefield", "electronic-city",
+        "jp-nagar", "btm-layout", "marathahalli", "sarjapur-road"
+      ],
+      "location_based_coordination": true,
+      "regional_caching": true
+    },
+    "property_category_specialization": {
+      "categories": [
+        "fully-furnished-offices",
+        "custom-built-workspaces", 
+        "co-working-spaces",
+        "private-office-cabins",
+        "enterprise-offices",
+        "virtual-offices",
+        "meeting-conference-rooms"
+      ],
+      "category_expert_agents": true,
+      "cross_category_coordination": "hierarchical"
+    },
+    "multi_tenant_isolation": {
+      "admin_user_separation": true,
+      "data_isolation_enforcement": true,
+      "role_based_coordination": {
+        "admin": "standard_access",
+        "super_admin": "elevated_coordination"
+      }
+    }
+  }
+}

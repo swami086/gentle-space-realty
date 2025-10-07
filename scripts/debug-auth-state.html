@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication State Debug</title>
+    <style>
+        body { font-family: monospace; padding: 20px; background: #f5f5f5; }
+        .debug-panel { background: white; padding: 20px; border-radius: 8px; margin: 10px 0; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        pre { background: #f8f9fa; padding: 10px; border-radius: 4px; overflow-x: auto; }
+        button { padding: 10px 20px; margin: 5px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Authentication State Debugger</h1>
+    <p>Open this page at <a href="http://localhost:4173/scripts/debug-auth-state.html" target="_blank">http://localhost:4173/scripts/debug-auth-state.html</a></p>
+    
+    <div class="debug-panel info">
+        <h3>📋 Debug Instructions</h3>
+        <ol>
+            <li>Open browser developer tools (F12)</li>
+            <li>Go to Application/Storage tab → Local Storage</li>
+            <li>Check for authentication tokens or session data</li>
+            <li>Go to Console tab and run the debug commands below</li>
+        </ol>
+    </div>
+
+    <div class="debug-panel">
+        <h3>🔧 Local Storage Check</h3>
+        <button onclick="checkLocalStorage()">Check Local Storage</button>
+        <div id="localStorage-result"></div>
+    </div>
+
+    <div class="debug-panel">
+        <h3>🔒 Supabase Session Check</h3>
+        <button onclick="checkSupabaseSession()">Check Supabase Session</button>
+        <div id="supabase-result"></div>
+    </div>
+
+    <div class="debug-panel">
+        <h3>🎯 Admin Store State Check</h3>
+        <button onclick="checkAdminStoreState()">Check Admin Store State</button>
+        <div id="adminStore-result"></div>
+    </div>
+
+    <div class="debug-panel">
+        <h3>🔍 Manual Debug Commands</h3>
+        <p>Run these commands in the browser console:</p>
+        <pre>
+// Check Local Storage
+console.log('Local Storage:', localStorage);
+for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+    console.log(`${key}:`, value);
+}
+
+// Check Supabase Session (if using Supabase)
+// Note: This requires access to the supabase client from the main app
+
+// Check current URL and routing state
+console.log('Current URL:', window.location.href);
+console.log('Pathname:', window.location.pathname);
+console.log('Search params:', window.location.search);
+
+// Check if React app has loaded
+console.log('React root element:', document.getElementById('app'));
+</pre>
+    </div>
+
+    <script>
+        function checkLocalStorage() {
+            const result = document.getElementById('localStorage-result');
+            const storageData = {};
+            
+            try {
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    const value = localStorage.getItem(key);
+                    storageData[key] = value;
+                }
+                
+                result.innerHTML = `
+                    <div class="info" style="margin-top: 10px;">
+                        <h4>Local Storage Contents:</h4>
+                        <pre>${JSON.stringify(storageData, null, 2)}</pre>
+                    </div>
+                `;
+            } catch (error) {
+                result.innerHTML = `
+                    <div class="error" style="margin-top: 10px;">
+                        <h4>Error accessing Local Storage:</h4>
+                        <pre>${error.message}</pre>
+                    </div>
+                `;
+            }
+        }
+
+        function checkSupabaseSession() {
+            const result = document.getElementById('supabase-result');
+            result.innerHTML = `
+                <div class="info" style="margin-top: 10px;">
+                    <h4>Supabase Session Check:</h4>
+                    <p>⚠️ This debug page cannot directly access the Supabase session from the main app.</p>
+                    <p>Please run the following command in the main app's console:</p>
+                    <pre>
+// If using Supabase:
+supabase.auth.getSession().then(({data, error}) => {
+    console.log('Supabase session:', data.session);
+    console.log('User:', data.session?.user);
+    if (error) console.error('Session error:', error);
+});
+                    </pre>
+                </div>
+            `;
+        }
+
+        function checkAdminStoreState() {
+            const result = document.getElementById('adminStore-result');
+            result.innerHTML = `
+                <div class="info" style="margin-top: 10px;">
+                    <h4>Admin Store State Check:</h4>
+                    <p>⚠️ This debug page cannot directly access the admin store from the main app.</p>
+                    <p>Please run the following command in the main app's console (on the admin page):</p>
+                    <pre>
+// Check React component state - you'll need to access this from the main app
+// This requires React DevTools or accessing the store directly
+
+// If you have Zustand devtools enabled:
+console.log('Admin Store State:', window.__ZUSTAND_DEVTOOLS_GLOBAL_STATE__);
+
+// Or manually inspect the store (this won't work from this page)
+// console.log(useAdminStore.getState());
+                    </pre>
+                </div>
+            `;
+        }
+
+        // Auto-check on page load
+        window.addEventListener('load', () => {
+            checkLocalStorage();
+        });
+    </script>
+</body>
+</html>

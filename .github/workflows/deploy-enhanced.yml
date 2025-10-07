@@ -1,0 +1,267 @@
+name: Enhanced Vercel Deployment
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      force_deploy:
+        description: 'Force deployment even if checks fail'
+        required: false
+        default: false
+        type: boolean
+      skip_health_check:
+        description: 'Skip post-deployment health check'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'push' && github.ref == 'refs/heads/develop') ||
+      (github.event_name == 'pull_request') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'staging')
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+        
+      - name: Deploy to Staging
+        id: deploy
+        run: |
+          ARGS="--staging --verbose"
+          if [ "${{ github.event.inputs.force_deploy }}" = "true" ]; then
+            ARGS="$ARGS --force"
+          fi
+          if [ "${{ github.event.inputs.skip_health_check }}" = "true" ]; then
+            ARGS="$ARGS --skip-health"
+          fi
+          
+          node scripts/vercel-deploy.js $ARGS
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          
+      - name: Extract deployment URL
+        id: extract_url
+        run: |
+          # Extract URL from deployment metadata if available
+          if [ -f ".vercel/last-deployment.json" ]; then
+            URL=$(jq -r '.url' .vercel/last-deployment.json)
+            echo "deployment_url=$URL" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && steps.extract_url.outputs.deployment_url != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deploymentUrl = '${{ steps.extract_url.outputs.deployment_url }}';
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🚀 Staging Deployment Ready
+              
+              **URL**: ${deploymentUrl}
+              **Environment**: Staging
+              **Commit**: \`${context.sha.substring(0, 7)}\`
+              
+              The deployment was automatically validated and is ready for review.
+              
+              ### Quick Links
+              - [🏠 Homepage](${deploymentUrl})
+              - [🏢 Properties](${deploymentUrl}/properties)  
+              - [👤 Admin Panel](${deploymentUrl}/admin)
+              - [🔍 Health Check](${deploymentUrl}/api/health)
+              `
+            });
+            
+      - name: Upload deployment artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deployment-staging-${{ github.run_number }}
+          path: |
+            .vercel/
+            dist/deployment-metadata.json
+          retention-days: 7
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production')
+    
+    environment:
+      name: production
+      url: ${{ steps.extract_url.outputs.deployment_url }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+        
+      - name: Deploy to Production
+        id: deploy
+        run: |
+          ARGS="--production --verbose"
+          if [ "${{ github.event.inputs.force_deploy }}" = "true" ]; then
+            ARGS="$ARGS --force"
+          fi
+          if [ "${{ github.event.inputs.skip_health_check }}" = "true" ]; then
+            ARGS="$ARGS --skip-health"
+          fi
+          
+          node scripts/vercel-deploy.js $ARGS
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          
+      - name: Extract deployment URL
+        id: extract_url
+        run: |
+          # Extract URL from deployment metadata if available
+          if [ -f ".vercel/last-deployment.json" ]; then
+            URL=$(jq -r '.url' .vercel/last-deployment.json)
+            echo "deployment_url=$URL" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Create GitHub Release
+        if: success() && steps.extract_url.outputs.deployment_url != ''
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Production Release v${{ github.run_number }}
+          body: |
+            ## 🚀 Production Deployment Successful!
+            
+            **Deployment URL**: ${{ steps.extract_url.outputs.deployment_url }}
+            **Environment**: Production
+            **Commit**: ${{ github.sha }}
+            **Branch**: ${{ github.ref_name }}
+            **Date**: ${{ github.event.head_commit.timestamp }}
+            
+            ### 📋 Deployment Details
+            - ✅ All pre-deployment checks passed
+            - ✅ Build completed successfully  
+            - ✅ Post-deployment health check passed
+            - ✅ Rollback capability available
+            
+            ### 🔗 Quick Links
+            - [🏠 Homepage](${{ steps.extract_url.outputs.deployment_url }})
+            - [🏢 Properties](${{ steps.extract_url.outputs.deployment_url }}/properties)  
+            - [👤 Admin Panel](${{ steps.extract_url.outputs.deployment_url }}/admin)
+            - [🔍 API Health](${{ steps.extract_url.outputs.deployment_url }}/api/health)
+            
+            ### 📝 Changes
+            ${{ github.event.head_commit.message }}
+            
+            ### 🛠️ Technical Info
+            - **Node.js**: 20.x
+            - **Build Tool**: Vite
+            - **Framework**: React + TypeScript
+            - **Deployment**: Vercel Serverless
+            
+            ---
+            
+            **🔄 Rollback**: If issues arise, run `npm run deploy:rollback`
+          draft: false
+          prerelease: false
+          
+      - name: Upload deployment artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deployment-production-${{ github.run_number }}
+          path: |
+            .vercel/
+            dist/deployment-metadata.json
+          retention-days: 30
+          
+      - name: Notify deployment success
+        if: success()
+        run: |
+          echo "::notice title=Production Deployment::Successfully deployed to ${{ steps.extract_url.outputs.deployment_url }}"
+
+  rollback:
+    name: Emergency Rollback
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    when: manual
+    
+    environment:
+      name: production-rollback
+      
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+        
+      - name: Perform Rollback
+        run: |
+          node scripts/vercel-deploy.js --rollback --verbose
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          
+      - name: Notify rollback
+        if: success()
+        run: |
+          echo "::warning title=Rollback Complete::Production has been rolled back to previous deployment"

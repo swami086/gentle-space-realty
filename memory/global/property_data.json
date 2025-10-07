@@ -1,0 +1,264 @@
+{
+  "propertyDataMemory": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-13T09:26:31.437Z",
+    "description": "Global property data memory bank for cross-agent access",
+    
+    "propertyRegistry": {
+      "activeProperties": {
+        "prop_001": {
+          "id": "prop_001",
+          "title": "Modern Downtown Apartment",
+          "description": "Luxurious 2-bedroom apartment in the heart of downtown",
+          "type": "apartment",
+          "price": 450000,
+          "location": {
+            "address": "123 Main Street",
+            "city": "Springfield",
+            "state": "IL",
+            "zipcode": "62701",
+            "coordinates": {
+              "lat": 39.7817,
+              "lng": -89.6501
+            },
+            "neighborhood": "Downtown District",
+            "school_district": "Springfield District 186"
+          },
+          "features": {
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "square_footage": 1200,
+            "parking": true,
+            "balcony": true,
+            "pet_friendly": false,
+            "utilities_included": ["water", "trash"],
+            "amenities": ["gym", "pool", "concierge"]
+          },
+          "images": [
+            {
+              "url": "/images/properties/prop_001/main.jpg",
+              "type": "main",
+              "alt": "Living room with modern furniture",
+              "order": 1
+            },
+            {
+              "url": "/images/properties/prop_001/kitchen.jpg",
+              "type": "interior",
+              "alt": "Modern kitchen with granite countertops",
+              "order": 2
+            }
+          ],
+          "status": "available",
+          "agent_assigned": "agent_sarah_chen",
+          "listing_date": "2025-09-01T10:00:00Z",
+          "last_modified": "2025-09-13T09:26:31.437Z",
+          "view_count": 245,
+          "inquiry_count": 12,
+          "favorite_count": 8
+        },
+        "prop_002": {
+          "id": "prop_002",
+          "title": "Family Home with Garden",
+          "description": "Spacious 4-bedroom house perfect for families",
+          "type": "house",
+          "price": 650000,
+          "location": {
+            "address": "456 Oak Avenue",
+            "city": "Springfield",
+            "state": "IL", 
+            "zipcode": "62704",
+            "coordinates": {
+              "lat": 39.8017,
+              "lng": -89.6201
+            },
+            "neighborhood": "Riverside Heights",
+            "school_district": "Ball Chatham District 5"
+          },
+          "features": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "square_footage": 2400,
+            "lot_size": 0.25,
+            "garage": 2,
+            "garden": true,
+            "fireplace": true,
+            "basement": "finished",
+            "year_built": 2018
+          },
+          "images": [
+            {
+              "url": "/images/properties/prop_002/exterior.jpg",
+              "type": "main",
+              "alt": "Beautiful house exterior with landscaping",
+              "order": 1
+            },
+            {
+              "url": "/images/properties/prop_002/garden.jpg",
+              "type": "exterior",
+              "alt": "Backyard garden with play area",
+              "order": 2
+            }
+          ],
+          "status": "available",
+          "agent_assigned": "agent_mike_rodriguez",
+          "listing_date": "2025-09-05T14:30:00Z",
+          "last_modified": "2025-09-12T16:45:00Z",
+          "view_count": 189,
+          "inquiry_count": 18,
+          "favorite_count": 15
+        }
+      },
+      
+      "propertyMetadata": {
+        "totalProperties": 2,
+        "availableProperties": 2,
+        "averagePrice": 550000,
+        "priceRange": {
+          "min": 450000,
+          "max": 650000
+        },
+        "propertyTypes": {
+          "house": 1,
+          "apartment": 1,
+          "commercial": 0,
+          "land": 0
+        },
+        "locationDistribution": {
+          "Downtown District": 1,
+          "Riverside Heights": 1
+        }
+      }
+    },
+    
+    "searchIndexes": {
+      "priceIndex": {
+        "ranges": {
+          "under_500k": ["prop_001"],
+          "500k_to_700k": ["prop_002"],
+          "over_700k": []
+        },
+        "lastUpdated": "2025-09-13T09:26:31.437Z"
+      },
+      "locationIndex": {
+        "byCity": {
+          "Springfield": ["prop_001", "prop_002"]
+        },
+        "byNeighborhood": {
+          "Downtown District": ["prop_001"],
+          "Riverside Heights": ["prop_002"]
+        },
+        "byZipcode": {
+          "62701": ["prop_001"],
+          "62704": ["prop_002"]
+        },
+        "lastUpdated": "2025-09-13T09:26:31.437Z"
+      },
+      "featuresIndex": {
+        "byBedrooms": {
+          "2": ["prop_001"],
+          "4": ["prop_002"]
+        },
+        "byType": {
+          "apartment": ["prop_001"],
+          "house": ["prop_002"]
+        },
+        "byAmenities": {
+          "parking": ["prop_001", "prop_002"],
+          "garden": ["prop_002"],
+          "pool": ["prop_001"]
+        },
+        "lastUpdated": "2025-09-13T09:26:31.437Z"
+      }
+    },
+    
+    "analytics": {
+      "searchPatterns": {
+        "popularSearches": [
+          {
+            "query": "apartment downtown",
+            "frequency": 45,
+            "conversion_rate": 0.12
+          },
+          {
+            "query": "house with garden",
+            "frequency": 38,
+            "conversion_rate": 0.18
+          },
+          {
+            "query": "2 bedroom",
+            "frequency": 62,
+            "conversion_rate": 0.09
+          }
+        ],
+        "filterUsage": {
+          "price_range": 0.78,
+          "property_type": 0.65,
+          "bedrooms": 0.52,
+          "location": 0.41,
+          "amenities": 0.23
+        }
+      },
+      "userBehavior": {
+        "averageTimeOnProperty": "2m 34s",
+        "averagePropertiesViewed": 4.2,
+        "inquiryRate": 0.15,
+        "favoriteRate": 0.08
+      },
+      "conversionFunnels": {
+        "search_to_view": 0.35,
+        "view_to_inquiry": 0.15,
+        "inquiry_to_contact": 0.78,
+        "contact_to_showing": 0.45
+      }
+    },
+    
+    "cacheConfiguration": {
+      "propertyList": {
+        "ttl": "5_minutes",
+        "max_size": "1000_entries",
+        "eviction_policy": "lru"
+      },
+      "propertyDetails": {
+        "ttl": "15_minutes", 
+        "max_size": "500_entries",
+        "eviction_policy": "lru"
+      },
+      "searchResults": {
+        "ttl": "2_minutes",
+        "max_size": "200_entries",
+        "eviction_policy": "ttl_based"
+      },
+      "images": {
+        "ttl": "1_hour",
+        "max_size": "100MB",
+        "eviction_policy": "size_based"
+      }
+    },
+    
+    "auditLog": {
+      "propertyChanges": [
+        {
+          "timestamp": "2025-09-13T09:26:31.437Z",
+          "property_id": "prop_001",
+          "operation": "created",
+          "agent": "system_initialization",
+          "changes": "initial_property_creation"
+        },
+        {
+          "timestamp": "2025-09-13T09:26:31.437Z",
+          "property_id": "prop_002", 
+          "operation": "created",
+          "agent": "system_initialization",
+          "changes": "initial_property_creation"
+        }
+      ],
+      "searchAnalytics": [
+        {
+          "timestamp": "2025-09-13T09:26:31.437Z",
+          "event": "search_index_update",
+          "details": "initial_index_creation"
+        }
+      ]
+    }
+  }
+}

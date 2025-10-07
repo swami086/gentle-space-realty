@@ -1,0 +1,101 @@
+{
+  "cloudSQL": {
+    "status": "passed",
+    "tests": [
+      {
+        "name": "Database Connection",
+        "status": "passed",
+        "details": "Successfully connected to Cloud SQL"
+      },
+      {
+        "name": "Properties Data Access",
+        "status": "passed",
+        "details": "Retrieved 18 properties"
+      },
+      {
+        "name": "Users Data Access",
+        "status": "passed",
+        "details": "Retrieved 10 users"
+      },
+      {
+        "name": "Testimonials Data Access",
+        "status": "passed",
+        "details": "Retrieved 6 testimonials"
+      },
+      {
+        "name": "FAQs Data Access",
+        "status": "passed",
+        "details": "Retrieved 14 FAQs"
+      },
+      {
+        "name": "Inquiries Data Access",
+        "status": "passed",
+        "details": "Retrieved 16 inquiries"
+      }
+    ]
+  },
+  "cloudStorage": {
+    "status": "passed",
+    "tests": [
+      {
+        "name": "File Upload",
+        "status": "passed",
+        "details": "Successfully uploaded test-upload-1759070158021.txt"
+      },
+      {
+        "name": "Public URL Generation",
+        "status": "passed",
+        "details": "Generated URL: https://storage.googleapis.com/gentle-space-property-images/test-upload-1759070158021.txt"
+      },
+      {
+        "name": "File Deletion",
+        "status": "passed",
+        "details": "Successfully deleted test file"
+      },
+      {
+        "name": "Bucket Access: gentle-space-property-videos",
+        "status": "passed",
+        "details": "Bucket accessible"
+      },
+      {
+        "name": "Bucket Access: gentle-space-property-media",
+        "status": "passed",
+        "details": "Bucket accessible"
+      },
+      {
+        "name": "Bucket Access: gentle-space-user-avatars",
+        "status": "passed",
+        "details": "Bucket accessible"
+      }
+    ]
+  },
+  "firebaseAuth": {
+    "status": "passed",
+    "tests": [
+      {
+        "name": "Firebase Admin Initialization",
+        "status": "passed",
+        "details": "Firebase Admin SDK properly initialized and can create tokens"
+      },
+      {
+        "name": "Custom Token Creation",
+        "status": "passed",
+        "details": "Successfully created custom token for test user"
+      },
+      {
+        "name": "Token Verification Setup",
+        "status": "passed",
+        "details": "Firebase Auth service configured and ready for token verification"
+      }
+    ]
+  },
+  "overall": {
+    "status": "passed",
+    "summary": {
+      "totalTests": 15,
+      "passedTests": 15,
+      "failedTests": 0,
+      "successRate": 100
+    }
+  }
+}
